@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FaGithub } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa";
 
 export const SectionProjects = (): JSX.Element => {
   const [repos, setRepos] = useState<IRepository[]>([]);
@@ -21,22 +21,36 @@ export const SectionProjects = (): JSX.Element => {
   }, []);
 
   return (
-    <section id="projetos" className="w-3/5 flex flex-col items-center justify-center z-0 py-20 gap-5">
-      <h2 className="self-start font-bold text-3xl">Meus projetos</h2>
-      <p className="self-start">Aqui estão alguns dos meus prinipais projetos</p>
-      <ul className="w-full grid grid-cols-2 self-center gap-16 border border-white">
+    <section
+      id="projetos"
+      className="z-0 flex w-10/12 flex-col items-center justify-center gap-5 bg-orange-300 py-20 md:w-3/5"
+    >
+      <h2 className="self-start text-3xl font-bold">Meus projetos</h2>
+      <p className="self-start">
+        Aqui estão alguns dos meus prinipais projetos
+      </p>
+      <ul className="grid w-full grid-cols-2 gap-16 self-center border border-white">
         {repos &&
-          repos?.map?.((repository) => (
-            <li className="h-52 flex flex-col gap-4 border-2 border-green-600 self-center" key={repository.id}>
-              <h2 className="text-2xl font-semibold ">{repository.name}</h2>
-              {repository.language ? (
-                <h3 className="text-gray-400">Linguagem Primária: {repository.language}</h3>
+          repos?.map?.(({ id, name, language, html_url }) => (
+            <li
+              className="flex h-52 flex-col gap-4 self-center border-2 border-green-600"
+              key={id}
+            >
+              <h2 className="text-2xl font-semibold ">{name}</h2>
+              {language ? (
+                <h3 className="text-gray-400">
+                  Linguagem Primária: {language}
+                </h3>
               ) : (
-                <h3 className="text-gray-400">Linguagem Primária: Linguagem primária não identificada</h3>
+                <h3 className="text-gray-400">
+                  Linguagem Primária: Linguagem primária não identificada
+                </h3>
               )}
-              <div className="flex gap-2 text-gray-400 hover:text-white transition-colors ease-linear delay-200">
-                <FaGithub />
-                <a href={repository.html_url} target="_blank">GitHub Code</a>
+              <div className="hover:text-gradient-to-r flex gap-2 from-green-400 to-blue-500 text-gray-400 transition-colors delay-200 ease-linear">
+                <FaGithub className="" />
+                <a href={html_url} target="_blank">
+                  GitHub Code
+                </a>
               </div>
             </li>
           ))}

@@ -1,4 +1,5 @@
-import { Header } from "../components/Header";
+import "@/styles/globals.css"
+import { Header } from "@/components/Header";
 import { HomeSection } from "@/components/HomeSection";
 import { Footer } from "@/components/Footer";
 import { SectionProjects } from "@/components/SectionProjects";
@@ -8,7 +9,7 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Header />
-      <main className="z-0 flex flex-col items-center justify-center mt-36">
+      <main className={`body .relative z-0 pt-36`}>
         <HomeSection />
         <SectionProjects />
         <Contats />

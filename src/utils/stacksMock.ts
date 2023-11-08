@@ -1,19 +1,16 @@
-// import { 
-//   title } from "process";
-import {
-  FaCss3Alt,
-  FaGitAlt,
-  FaHtml5,
-  FaJs,
-  FaNode,
-  FaPython,
-  FaReact,
-  FaSass,
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaJs, FaNode,
+  FaPython,FaReact,FaSass
 } from "react-icons/fa";
-import { SiTypescript,  SiSqlite, SiAxios, SiDjango, SiDotenv, SiExpress, SiJsonwebtokens, SiReactrouter, SiZod, SiTailwindcss, SiStyledcomponents, SiNextdotjs } from "react-icons/si"
-import { BiLogoPostgresql } from "react-icons/bi"
-import { MdOutlineDataObject } from "react-icons/md"
-import { TbBrandNextjs } from "react-icons/tb"
+
+import {
+  SiTypescript, SiSqlite, SiAxios, SiDjango, SiDotenv,
+  SiExpress, SiJsonwebtokens, SiReactrouter, SiZod,
+  SiTailwindcss, SiStyledcomponents, SiNextdotjs,
+} from "react-icons/si";
+
+import { BiLogoPostgresql, BiLogoTailwindCss } from "react-icons/bi";
+import { MdOutlineDataObject } from "react-icons/md";
+import { TbBrandNextjs } from "react-icons/tb";
 // import { SiNextdotjs } from "react-icons/"
 
 export const myStacks = [
@@ -29,75 +26,77 @@ export const myStacks = [
     title: "JavaScript",
     img: FaJs,
   },
-  { 
-    title: "TypeScript", 
-    img: SiTypescript 
-  },
   {
-    title: "Node JS",
-    img: FaNode,
+    title: "TypeScript",
+    img: SiTypescript,
   },
   {
     title: "React",
     img: FaReact,
   },
   {
-    title: "Nest.JS",
+    title: "Next.js",
     img: SiNextdotjs,
   },
-  { 
-    title: "Styled-Components", 
-    img: SiStyledcomponents 
+  {
+    title: "Styled-Components",
+    img: SiStyledcomponents,
   },
-  { title: "TailwindCSS", 
-    img: SiTailwindcss
+  {
+    title: "Sass",
+    img: FaSass,
   },
-  { 
-    title: "Axios", 
-    img: SiAxios 
+  { title: "TailwindCSS", img: BiLogoTailwindCss },
+  {
+    title: "Axios",
+    img: SiAxios,
   },
-  { 
-    title: "React Router-DOM", 
-    img: SiReactrouter 
+  {
+    title: "React Router-DOM",
+    img: SiReactrouter,
   },
-  { 
-    title: "Zod", 
-    img: SiZod 
+  {
+    title: "Zod",
+    img: SiZod,
   },
-  { 
-    title: "JSONweboken", 
-    img: SiJsonwebtokens 
+  {
+    title: "Base Enviroments",
+    img: SiDotenv,
   },
-  { 
-    title: "Express.Js", 
-    img: SiExpress 
+  {
+    title: "JSONweboken",
+    img: SiJsonwebtokens,
   },
-  { 
-    title: "Base Enviroments", 
-    img: SiDotenv 
+  {
+    title: "Node.js",
+    img: FaNode,
   },
-  { 
-    title: "Django", 
-    img: SiDjango 
+  {
+    title: "Express.js",
+    img: SiExpress,
   },
-  { 
-    title: "Python", 
-    img: FaPython 
+  {
+    title: "Django",
+    img: SiDjango,
   },
-  { 
-    title: "Sqlite3", 
-    img: SiSqlite 
+  {
+    title: "Python",
+    img: FaPython,
   },
-  { 
-    title: "PostgreSQL", 
-     img: BiLogoPostgresql 
+  {
+    title: "Sqlite3",
+    img: SiSqlite,
   },
-  { 
-    title: "TypeORM", 
-    img: MdOutlineDataObject 
+  {
+    title: "PostgreSQL",
+    img: BiLogoPostgresql,
   },
-  { 
-    title: "Git", 
-    img: FaGitAlt 
+  {
+    title: "TypeORM",
+    img: MdOutlineDataObject,
+  },
+  {
+    title: "Git",
+    img: FaGitAlt,
   },
 ];

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .body {
+    @apply w-screen min-h-full relative z-0 flex flex-col justify-center items-center overflow-x-hidden bg-gray-i-800;
+  }
+
+  .custom-border {
+    @apply bg-gradient-to-r from-green-500 from-20% to-blue-600 to-80%
+  }
+
+  /* .navbarDesktop {
+    @apply flex w-2/4 flex-row  items-center justify-between font-normal
+  } */
+}

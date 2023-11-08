@@ -1,11 +1,11 @@
-import "./styles/globals.css";
 import type { Metadata } from "next";
-import { League_Spartan } from "next/font/google";
+import { Averia_Sans_Libre, Herr_Von_Muellerhoff, IBM_Plex_Mono, IBM_Plex_Sans, Inter, Lato, Lora, Montserrat, Open_Sans, Poppins, Roboto, Source_Sans_3, Source_Serif_4, Ubuntu } from "next/font/google";
 import Head from "next/head";
+import icon from "../public/favicon.ico"
 
-const lato = League_Spartan({
-  weight: ["400", "700", "900"],
+const poppins = IBM_Plex_Sans({
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={lato.className}>{children}</body>
+      <body className={`${poppins.className} .relative z-0 overflow-x-hidden`}>{children}</body>
     </html>
   );
 };
