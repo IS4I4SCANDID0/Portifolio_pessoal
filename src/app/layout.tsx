@@ -5,7 +5,7 @@ import icon from "../public/favicon.ico"
 
 const poppins = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "300", "700"],
 });
 
 export const metadata: Metadata = {

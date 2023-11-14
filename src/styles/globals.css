@@ -4,13 +4,19 @@
 
 @layer components {
   .body {
-    @apply w-screen min-h-full relative z-0 flex flex-col justify-center items-center overflow-x-hidden bg-gray-i-800;
+    @apply w-screen min-h-full relative z-0 flex flex-col justify-center items-center overflow-x-hidden bg-gray-i-900 text-white;
   }
 
-  .custom-border {
-    @apply bg-gradient-to-r from-green-500 from-20% to-blue-600 to-80%
+  .custom-gradient {
+    @apply bg-gradient-to-r from-teal-400 from-20% to-blue-700 to-80%
+    /* @apply bg-gradient-to-r from-purple-700 from-20% to-cyan-500 to-80%; */
+    /* @apply bg-gradient-to-r from-purple-700 from-20% to-blue-500 to-80%; */
+    /* @apply bg-gradient-to-r from-violet-800 to-blue-700; */
   }
 
+  .custom-text {
+    @apply bg-clip-text text-transparent
+  }
   /* .navbarDesktop {
     @apply flex w-2/4 flex-row  items-center justify-between font-normal
   } */

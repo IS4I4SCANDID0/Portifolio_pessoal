@@ -13,12 +13,9 @@ const config: Config = {
       textColor: {
         "stack-text": "#adb5bd"
       },
-      // variants: {
-      //   transitionDuration: ["responsive", "hover", "focus"],
-      // },
       colors: {
-        "gray-i-800": "#343a40"
-      }
+        "gray-i-900": "#212529"
+      },
     },
   
   },

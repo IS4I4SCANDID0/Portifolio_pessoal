@@ -1,16 +1,12 @@
 "use client";
-
 import { useCallback, useState } from "react";
 import { Poppins, Raleway } from "next/font/google";
 import { LiaBarsSolid } from "react-icons/lia";
 import { VscClose } from "react-icons/vsc";
 import { MenuMobile } from "./menuMobile";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-const poppins = Raleway({
-  subsets: ["latin"],
-  weight: ["300"],
-});
 
 export const Header = (): JSX.Element => {
   const [isDrop, setIsDrop] = useState<boolean>(false);
@@ -19,12 +15,17 @@ export const Header = (): JSX.Element => {
     setIsDrop(!isDrop);
   };
 
+  const menuVariants = {
+    open: { opacity: 1,  },
+    closed: { opacity: 0, y: 0 },  
+  }
+
   return (
     <>
       <header
-        className="fixed z-10 flex  h-36 w-screen flex-col items-center justify-center gap-4 bg-gray-950 text-white  md:p-0  lg:p-12"
+        className="fixed z-10 flex h-24 w-screen flex-col items-center justify-center gap-4 bg-gray-950 text-white  md:p-0"
       >
-        <div className="flex w-11/12 items-center justify-between  gap-5 bg-orange-500 px-0 md:w-2/3 md:px-4">
+        <div className="w-11/12 lg:w-9/12 flex items-center justify-between gap-5 lg:px-0 bg-orange-500">
           <h2 className="text-xl md:text-2xl font-semibold">
             Isaias Candido
           </h2>
@@ -65,27 +66,34 @@ export const Header = (): JSX.Element => {
               Mídias Sociais
             </Link>
           </nav>
-          <div className="lg:hidden">
+          <motion.button 
+            type= "button" 
+            className= "lg:hidden"
+            initial= "open"
+            animate= {isDrop ? "open" : "closed"}
+
+          >
             {!isDrop ? (
               <LiaBarsSolid
               siize={30}
-              role="button"
               className="h-8 w-8"
               onClick={() => handleDrop()}
               />
-              ) : (
+            ) : (
                 <VscClose
                 size={30}
-                role="button"
                 className="h-8 w-8"
                 onClick={() => handleDrop()}
                 />
-                )}
-          </div>
+            )}
+          </motion.button>
         </div>
         <MenuMobile isDrop={isDrop} />
-      <div className={`custom-border w-full h-[0.1rem] fixed z-10 top-36 right-0 left-0`}></div>
+        {!isDrop && 
+          <div className={`custom-gradient w-full h-[0.1rem] fixed z-10 top-24 right-0 left-0`}></div>
+        }
       </header>
     </>
   );
 };
+//! TERMINAR DE ANIMAR O BOTÃO E ALINHAR O QUE FALTA

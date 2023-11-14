@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { HomeSection } from "@/components/HomeSection";
 import { Footer } from "@/components/Footer";
 import { SectionProjects } from "@/components/SectionProjects";
-import { Contats } from "@/components/ContactsSection";
+import { Contacts } from "@/components/ContactsSection";
 
 const Home = (): JSX.Element => {
   return (
@@ -12,7 +12,7 @@ const Home = (): JSX.Element => {
       <main className={`body .relative z-0 pt-36`}>
         <HomeSection />
         <SectionProjects />
-        <Contats />
+        <Contacts />
       </main>
       <Footer />
     </>
