@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Averia_Sans_Libre, Herr_Von_Muellerhoff, IBM_Plex_Mono, IBM_Plex_Sans, Inter, Lato, Lora, Montserrat, Open_Sans, Poppins, Roboto, Source_Sans_3, Source_Serif_4, Ubuntu } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import Head from "next/head";
-import icon from "../public/favicon.ico"
-
-const poppins = IBM_Plex_Sans({
+// import icon from "../public/icon.svg"
+// ! ADICIONAR FAVICON
+const IBMPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["400", "300", "700"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -17,11 +17,14 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="pt-BR">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.sgv" />
       </Head>
-      <body className={`${poppins.className} .relative z-0 overflow-x-hidden`}>{children}</body>
+      <body className={`${IBMPlexSans.className} .relative z-0 overflow-x-hidden`}>
+        {children}
+      </body>
     </html>
   );
 };
 
 export default RootLayout;
+// ! fazer uma página de errro 404 personalizada

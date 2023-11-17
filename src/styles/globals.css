@@ -17,7 +17,8 @@
   .custom-text {
     @apply bg-clip-text text-transparent
   }
-  /* .navbarDesktop {
-    @apply flex w-2/4 flex-row  items-center justify-between font-normal
-  } */
+
+  .img-projects-bg {
+    background-image: url("../public/header-bg.svg")
+  }
 }

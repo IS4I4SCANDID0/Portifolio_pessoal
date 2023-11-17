@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 
-export const MenuMobile = ({ isDrop }: INavLinksProps): JSX.Element => {
+export const MenuMobile = ({ isDrop, handleDrop }: INavLinksProps): JSX.Element => {
+  // !FAZER A ANIMAÇÃO DE SCROLL
   const controls: AnimationControls = useAnimation()
 
   const myVariants = {
@@ -25,7 +26,7 @@ export const MenuMobile = ({ isDrop }: INavLinksProps): JSX.Element => {
     closed: {
       opacity: 0,
       y: -100,
-      transition: { type: "spring" , ease: "easeInOut", duration: 1 },
+      transition: { type: "spring" , ease: "easeInOut", duration: 0.4 },
     },
   };
 
@@ -44,30 +45,30 @@ export const MenuMobile = ({ isDrop }: INavLinksProps): JSX.Element => {
         <motion.nav
           initial="closed"
           animate={controls}
-          exit="closed"
           variants={myVariants}
-          className="absolute left-0 right-0 top-16 z-20 flex flex-col items-start gap-4 bg-gray-950 pb-4 pl-4 md:pl-8" 
+          exit="closed"
+          className="absolute left-0 right-0 top-16 z-30 flex flex-col items-start gap-4 bg-gray-950 pb-4 pl-4 md:pl-8" 
         >
           <motion.div variants={childVariants}>
-            <Link className="text-2xl" href="#inicio" role="link">
+            <Link className="text-2xl" href="#inicio" role="link" onClick={() => handleDrop()}>
               Início
             </Link>
           </motion.div>
 
           <motion.div variants={childVariants}>
-            <Link className="text-2xl" href="#projetos" role="link">
+            <Link className="text-2xl" href="#projetos" role="link" onClick={() => handleDrop()}>
               Projetos
             </Link>
           </motion.div>
 
           <motion.div variants={childVariants}>
-            <Link className="text-2xl" href="#contatos" role="link">
+            <Link className="text-2xl" href="#contatos" role="link" onClick={() => handleDrop()}>
               Contatos
             </Link>
           </motion.div>
 
           <motion.div variants={childVariants}>
-            <Link className="text-2xl" href="#midiasSciais" role="link">
+            <Link className="text-2xl" href="#rodape" role="link" onClick={() => handleDrop()}>
               Mídias Sociais
             </Link>
           </motion.div>
@@ -75,9 +76,9 @@ export const MenuMobile = ({ isDrop }: INavLinksProps): JSX.Element => {
           <motion.div
             initial="closed"
             animate={controls}
-            exit="closed"
             variants={childVariants}
             transition={{ delay: 1 }}
+            exit="closed"
             className={`custom-gradient absolute left-0 right-0 top-48 z-20 h-[0.1rem] w-full`}
           ></motion.div>
         </motion.nav>

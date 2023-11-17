@@ -30,7 +30,7 @@ export const SectionProjects = (): JSX.Element => {
   return (
     <section
       id="projetos"
-      className="flex w-screen flex-col items-center justify-center bg-gray-950 py-14"
+      className="flex w-screen flex-col items-center justify-center bg-gray-950 py-14 static z-10"
     >
       <div className="flex w-11/12 flex-col items-center justify-center gap-6 border border-red-600 lg:w-9/12">
         <h2 className="self-start text-2xl md:3xl font-bold xl:text-4xlxl">
@@ -48,7 +48,7 @@ export const SectionProjects = (): JSX.Element => {
               >
                 <h2 className={`text-lg  text-justify font-semibold lg:text-2xl flex flex-col lg:flex-row-reverse self-start gap-4 ${
                   index === 0
-                    ? `before:custom-gradient before:flex before:text-black before:font-semibold before:text-base before:content-["New"]
+                    ? `before:custom-gradient before:flex before:text-gray-950 before:font-semibold before:text-base before:content-["New"]
                       before:justify-center before:items-center before:w-11 before:h-8 before:rounded-md`
                     : ""
                 }`}>{name}</h2>
@@ -61,10 +61,10 @@ export const SectionProjects = (): JSX.Element => {
                     Linguagem Primária: Linguagem primária não identificada
                   </h3>
                 )}
-                <div className="flex items-center gap-2 text-gray-400 transition-colors delay-200 ease-linear">
-                  <FaGithub className="" />
+                <div className={`flex items-center gap-2 text-gray-400`}>
+                  <FaGithub size={20} />
                   <a
-                    className={`${monda.className}`}
+                    className={`${monda.className} hover:custom-text hover:custom-gradient transition duration-150`}
                     href={html_url}
                     target="_blank"
                   >

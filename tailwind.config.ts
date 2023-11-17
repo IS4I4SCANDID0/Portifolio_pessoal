@@ -17,7 +17,9 @@ const config: Config = {
         "gray-i-900": "#212529"
       },
     },
-  
+    // backgroundImage: theme => ({
+    //   "img-background-projects": "url('/public/header-bg.svg')" 
+    // })
   },
   plugins: [],
 };

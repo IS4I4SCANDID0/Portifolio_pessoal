@@ -9,4 +9,5 @@ export interface IconProps {
 
 export interface INavLinksProps {
   isDrop: boolean
+  handleDrop: () => void
 }
