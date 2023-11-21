@@ -42,7 +42,7 @@ export const Contacts = (): JSX.Element => {
   return (
     <>
       <div className={`custom-gradient h-[0.15rem] w-full static z-10`}></div>
-      <section id="contatos" className="flex min-h-screen w-screen flex-col items-center justify-between static z-10 border border-red-500 bg-gray-950">
+      <section id="contatos" className="flex min-h-screen w-screen flex-col items-center justify-between static z-10 border border-red-500 bg-gray-i-900">
         <div className="flex h-5/6 w-11/12 lg:w-[72%] flex-col border border-lime-400 lg:flex-row lg:justify-between mt-6">
         <motion.div
             ref={ref}

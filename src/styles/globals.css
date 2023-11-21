@@ -21,4 +21,8 @@
   .img-projects-bg {
     background-image: url("../public/header-bg.svg")
   }
+
+  .img-code-bg {
+    background-image: url("../public/pexels-markus-spiske-12081657.jpg");
+  }
 }

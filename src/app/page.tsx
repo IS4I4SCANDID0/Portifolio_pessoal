@@ -9,7 +9,7 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Header />
-      <main className={`body .relative z-10 pt-36`}>
+      <main className={`body .relative z-10 pt-36 lg:pt-0`}>
         <HomeSection />
         <SectionProjects />
         <Contacts />

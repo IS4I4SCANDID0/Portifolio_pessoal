@@ -10,6 +10,7 @@ export interface StackProps {
   icon?: IconType | string;
   key: number
   chiidren?: ChildrenProps;
+  size?: number
 }
 
 
