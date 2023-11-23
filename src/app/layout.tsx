@@ -19,7 +19,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <Head>
         <link rel="icon" href="/icon.sgv" />
       </Head>
-      <body className={`${IBMPlexSans.className} .relative z-0 overflow-x-hidden`}>
+      <body className={`${IBMPlexSans.className} relative z-0 overflow-x-hidden scrollbar-thin scrollbar-thumb-gradient scrollbar-track-gray-950`}>
         {children}
       </body>
     </html>

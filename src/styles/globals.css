@@ -25,4 +25,12 @@
   .img-code-bg {
     background-image: url("../public/pexels-markus-spiske-12081657.jpg");
   }
+
+  .custom-scroll-gradient {
+    @apply bg-gradient-to-b from-teal-400 from-20% to-blue-700 to-80%
+  } 
+
+  .scrollbar-thumb-gradient::-webkit-scrollbar-thumb {
+    @apply custom-scroll-gradient
+  }
 }

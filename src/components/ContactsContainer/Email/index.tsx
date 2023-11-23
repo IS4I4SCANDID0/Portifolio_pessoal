@@ -12,8 +12,8 @@ export const EmailContainer = ({ Icon }: IconProps): JSX.Element => {
   // const isIcon = typeof Icon
 
   return (
-    <div className="max-w-full lg:p-3 mt-4 flex items-center border border-purple-500">
-      <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-r from-red-500 from-20% to-red-800 to-80% p-4">
+    <div className="max-w-full lg:p-3 mt-4 flex items-center">
+      <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-r from-neutral-900 from-20% to-black to-80% p-4">
         <IoMailOpenOutline className="fill-white" size={30} />
       </div>
       <div className="flex flex-col gap-3">

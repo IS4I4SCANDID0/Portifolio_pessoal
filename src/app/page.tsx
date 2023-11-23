@@ -2,7 +2,7 @@ import "@/styles/globals.css"
 import { Header } from "@/components/Header";
 import { HomeSection } from "@/components/HomeSection";
 import { Footer } from "@/components/Footer";
-import { SectionProjects } from "@/components/SectionProjects";
+import { SectionProjects } from "@/components/projectSection";
 import { Contacts } from "@/components/ContactsSection";
 
 const Home = (): JSX.Element => {

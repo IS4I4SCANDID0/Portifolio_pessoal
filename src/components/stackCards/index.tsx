@@ -5,7 +5,7 @@ export const StackCard = ({ title, icon: Icon }: StackProps): JSX.Element => {
   const isString = typeof Icon === "string";
   
   return (
-    <li className="border border-red-500 max-w-[135px] min-h-[115px] gap-4 flex flex-col justify-center items-center mt-4">
+    <li className="max-w-[135px] min-h-[115px] gap-4 flex flex-col justify-center items-center mt-4">
       {isString ? (
          <img src={Icon} alt={title} title={title} />
       ): (

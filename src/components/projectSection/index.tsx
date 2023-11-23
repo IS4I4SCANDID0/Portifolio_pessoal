@@ -5,7 +5,7 @@ import { Raleway } from "next/font/google";
 
 const raleway = Raleway({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["500"],
 });
 
 export const SectionProjects = (): JSX.Element => {
@@ -36,18 +36,18 @@ export const SectionProjects = (): JSX.Element => {
         id="projetos"
         className="static z-10 flex w-screen flex-col items-center justify-center bg-gray-950 py-14"
       >
-        <div className="flex w-11/12 flex-col items-center justify-center gap-6 border border-red-600 lg:w-9/12">
-          <h2 className="md:3xl xl:text-4xlxl self-start text-2xl font-bold">
+        <div className="flex w-11/12 flex-col items-center justify-center gap-6 lg:w-[1250px]">
+          <h2 className="self-start text-3xl font-bold my-3">
             Meus projetos
           </h2>
-          <p className="self-start text-base lg:text-xl xl:text-2xl">
+          <p className="self-start text-xl pb-8">
             Aqui estão meus principais projetos
           </p>
-          <ul className="flex w-full flex-col gap-16 self-start border border-yellow-400 py-7 md:self-center lg:grid lg:grid-cols-2">
+          <ul className="flex w-full flex-col gap-16 self-start py-7 md:self-center lg:grid lg:grid-cols-2">
             {repos &&
               repos?.map?.(({ id, name, language, html_url }, index) => (
                 <li
-                  className={`flex h-52 min-w-full max-w-full flex-col gap-4 self-center border-2 border-green-600`}
+                  className={`flex h-52 min-w-full max-w-full flex-col gap-4 self-center`}
                   key={id}
                 >
                   <h2

@@ -1,7 +1,9 @@
 import type { Config } from "tailwindcss";
+import tailwindScrollbar from 'tailwind-scrollbar';
+import prettierPluginTailwindcss from 'prettier-plugin-tailwindcss';
 
 const config: Config = {
-  // mode: "jit",
+  mode: "jit",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,7 +25,9 @@ const config: Config = {
     //   "img-background-projects": "url('/public/header-bg.svg')" 
     // })
   },
-  plugins: [],
+  plugins: [
+    tailwindScrollbar,
+  ],
   
 };
 export default config;

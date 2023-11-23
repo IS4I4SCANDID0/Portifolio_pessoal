@@ -21,10 +21,10 @@ export const Header = (): JSX.Element => {
 
   return (
     <>
-      <header className="fixed z-20 flex h-24 w-screen flex-col items-center justify-center gap-4 bg-gray-950 text-white  md:p-0">
-        <div className="flex w-11/12 items-center justify-between gap-5 bg-orange-500 lg:w-9/12 lg:px-0">
+      <header className="fixed z-20 flex h-24 w-screen flex-col items-center justify-center gap-4 bg-gray-950 text-white md:p-0">
+        <div className="flex w-11/12 items-center justify-between gap-5 px-1 lg:w-[1250px] lg:px-0">
           <h2 className="text-xl font-semibold md:text-2xl">Isaias Candido</h2>
-          <nav className="hidden w-2/4 items-center justify-between  bg-red-600 font-normal lg:flex lg:flex-row lg:w-2/5">
+          <nav className="hidden w-2/4 items-center justify-between font-normal lg:flex lg:flex-row lg:w-2/5">
             <Link className="text-xl" href="#inicio" role="button">
               Início
             </Link>
@@ -49,7 +49,7 @@ export const Header = (): JSX.Element => {
           >
             {!isDrop ? (
               <LiaBarsSolid
-                siize={30}
+                size={30}
                 className="h-8 w-8"
                 onClick={() => handleDrop()}
               />
