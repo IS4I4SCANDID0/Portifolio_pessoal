@@ -9,17 +9,17 @@ export const Footer = (): JSX.Element => {
       id="rodape"
       className="flex h-96 w-screen flex-col items-center justify-center bg-gray-950 text-white"
     >
-      <div className="mx-auto flex w-11/12 flex-col items-center gap-6 lg:w-[1250px] lg:flex-row lg:justify-between">
+      <div className="mx-auto flex w-11/12 flex-col items-center gap-6 lg:max-w-[1250px] lg:flex-row lg:justify-between">
         <div className="flex flex-col text-center lg:text-left">
-          <h2 className="mb-4 text-2xl font-semibold">Obrigado por visitar!</h2>
-          <p className="text-sm font-normal text-zinc-400 lg:text-lg">
+          <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold">Obrigado por visitar!</h2>
+          <p className="text-sm md:text-base font-normal text-zinc-400 lg:text-lg">
             Espero que tenha gostado da experiência!
           </p>
-          <p className="text-sm font-normal text-zinc-400 lg:text-lg">
-            Visite minhas redes sociais. Vamos criar conexões
+          <p className="text-sm md:text-base font-normal text-zinc-400 lg:text-lg">
+            Me siga na redes sociais. Vamos criar conexões e conversar
           </p>
         </div>
-        <div className="flex w-[280px] max-w-[300px] items-center justify-between px-2 py-4">
+        <div className="flex max-w-[280px] border-2 border-indigo-400 items-center justify-between gap-6 mt-7">
           <Link
             href={"https://instagram.com/isaiasmiranda_c"}
             target="_blank"

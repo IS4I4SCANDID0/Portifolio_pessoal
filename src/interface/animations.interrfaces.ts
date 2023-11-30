@@ -4,5 +4,5 @@ export type TAnimatedTextProps = {
   text: string | string[];
   el?: keyof JSX.IntrinsicElements;
   className?: string | undefined;
-  animateVariants: Variants;
+  animateVariants?: Variants;
 };

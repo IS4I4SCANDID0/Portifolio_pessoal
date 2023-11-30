@@ -14,15 +14,10 @@ export const Header = (): JSX.Element => {
     setIsDrop(!isDrop);
   }, [isDrop]);
 
-  const menuVariants = {
-    open: { opacity: 1 },
-    closed: { opacity: 0, y: 0 },
-  };
-
   return (
     <>
       <header className="fixed z-20 flex h-24 w-screen flex-col items-center justify-center gap-4 bg-gray-950 text-white md:p-0">
-        <div className="flex w-11/12 items-center justify-between gap-5 px-1 lg:w-[1250px] lg:px-0">
+        <div className="flex w-11/12 items-center justify-between gap-5 px-1 lg:max-w-[1250px] lg:px-0">
           <h2 className="text-xl font-semibold md:text-2xl">Isaias Candido</h2>
           <nav className="hidden w-2/4 items-center justify-between font-normal lg:flex lg:flex-row lg:w-2/5">
             <Link className="text-xl" href="#inicio" role="button">
@@ -46,6 +41,7 @@ export const Header = (): JSX.Element => {
             className="lg:hidden"
             initial="open"
             animate={isDrop ? "open" : "closed"}
+            aria-label={isDrop ? "Abrir menu" : "Fechar menu"}
           >
             {!isDrop ? (
               <LiaBarsSolid

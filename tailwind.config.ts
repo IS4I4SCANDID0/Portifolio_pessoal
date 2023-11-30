@@ -16,18 +16,14 @@ const config: Config = {
         "stack-text": "#adb5bd"
       },
       colors: {
-        // "gray-i-900": "#212529",
-        "gray-i-900": "#1F2226",
-      
+        "gray-i-900": "#1F2226",   
       },
     },
-    // backgroundImage: theme => ({
-    //   "img-background-projects": "url('/public/header-bg.svg')" 
-    // })
   },
   plugins: [
     tailwindScrollbar,
   ],
   
 };
+
 export default config;

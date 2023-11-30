@@ -17,17 +17,17 @@ export const SectionProjects = (): JSX.Element => {
         `https://api.github.com/users/IS4I4SCANDID0/repos?sort=created&direction=desc`,
       );
 
-      const responseJson = await response.json();
+      let responseJson = await response.json();
 
-      console.log(responseJson);
-      setRepos(responseJson);
-
+      const updatedRes = responseJson.filter((_: number, index: number) => index !== 5)
+      console.log(updatedRes);
+      
+      setRepos(updatedRes);
+      
       return responseJson;
     };
     fetchData();
   }, []);
-
-  
 
   return (
     <>

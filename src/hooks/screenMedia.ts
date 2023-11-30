@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
 
 export const useMediaScreen = (breakpoint: number): boolean => {
-  const [isMobile, setIsMobile] = useState<boolean>(false)
-  
+  const [isIPadAir, setIsIPadAir] = useState<boolean>(true)
+
   useEffect(() => {
     const measureScreen = (): void => {
       if(window.innerWidth < breakpoint) {
-        setIsMobile(true)
+        setIsIPadAir(false)
 
       } else if (window.innerWidth >= breakpoint) {
-        setIsMobile(false)
+        setIsIPadAir(true)
       }
     }
     measureScreen()
@@ -21,8 +21,5 @@ export const useMediaScreen = (breakpoint: number): boolean => {
     }
   }, [])
 
-  return isMobile
+  return isIPadAir
 } 
-
-
-// bg-gradient-to-r from-green-400 to-blue-500

@@ -7,6 +7,7 @@ import {
   useMotionValue,
   useMotionValueEvent,
   useTransform,
+  MotionValue,
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { WhatsAppContainer } from "../ContactsContainer/WhatsApp";
@@ -14,65 +15,49 @@ import { EmailContainer } from "../ContactsContainer/Email";
 import { LinkedInContainer } from "../ContactsContainer/LinkedIn";
 
 export const Contacts = (): JSX.Element => {
-  const ref = useRef(null);
-  const { scrollY } = useScroll({ container: ref });
-  const [lastScrollY, setLastScrollY] = useState<number>(0);
-  const [scrollDirection, setScrollDirection] = useState<number>(0);
+  const ref = useRef<HTMLElement | null >(null);
+  const { scrollYProgress } = useScroll();
+  const scale: MotionValue<number> = useTransform(scrollYProgress, [0, 1], [0.1 , 0.9])
 
-  useMotionValueEvent(scrollY, "change", (v) => {
-    setScrollDirection(v > lastScrollY ? 1 : -1);
-    setLastScrollY(v);
-  });
-
-  const scale = useTransform(scrollY, (value) => {
-    return scrollDirection === 3
-      ? Math.max(3, value / 1000)
-      : Math.min(3, value / 1000);
-  });
-
-  // const isInView = useInView(ref)
-
-  // useEffect(() => {
-  //   if(isInView) {
-
-  //     controls.start({
-  //       scale: 1.1,
-  //       transition: { duration: 0.3 }
-  //     });
-
-  //   } else {
-  //     controls.start({
-  //       scale: 1,
-  //       transition: { duration: 0.3 }
-  //     });
-  //   }
-  // }, [controls, isInView])
-
+  // !DEBUGAR  A ANIMAÇÃO DE SCALE
   return (
     <>
       <div className={`custom-gradient h-[0.15rem] w-full`}></div>
-      <section id="contatos" className="flex h-[900px] w-screen flex-col items-center justify-between bg-gray-i-900">
-        <div className="flex w-11/12 flex-col self-center lg:w-[65%] lg:flex-row lg:justify-between my-auto">
+      <section
+        id="contatos"
+        className="flex static z-10 h-[56.25rem] w-screen flex-col items-center justify-between border-2 border-sky-400 bg-gray-i-900 lg:flex-row lg:pt-40"
+      >
+        <div className="mx-auto my-auto flex w-11/12 flex-col self-center border-2 border-red-600 lg:h-full lg:w-[65%] lg:flex-row lg:items-center lg:justify-between"
+          // ref={ref}
+        >
           <motion.div
-            ref={ref}
-            className={`h-48 w-full p-5 lg:mt-4 lg:h-full lg:w-[400px] lg:px-5 lg:py-3`}
+            className={`h-48 max-w-fit border-2 lg:h-[700px] lg:w-[400px] lg:self-center lg:border-2 lg:border-yellow-400`}
+            style={{ scale }}
           >
-            <motion.h2 className={`text-2xl font-semibold`}>
-              Vamos{" "}
-              <motion.span
-                className={`custom-text custom-gradient text-2xl font-semibold`}
+            <aside className="max-w-[25rem] max-h-max lg:gap-[1rem] border-2 border-violet-400 lg:sticky lg:top-32 lg:z-30"
+              ref={ref}
+              // style={{ scale }}
+            >
+              <h2
+                className={`max-w-fit border-2 border-emerald-400 text-2xl font-semibold `}
+                // style={{ scale }}
               >
-                transformar suas
-              </motion.span>{" "}
-              <motion.span
-                className={`custom-text custom-gradient text-2xl font-semibold`}
-              >
-               ideias em realidade
-              </motion.span>
-              , entre em contato!
-            </motion.h2>
+                Vamos
+                <span
+                  className={`custom-text custom-gradient text-2xl font-bold`}
+                >
+                  transformar suas
+                </span>
+                <span
+                  className={`custom-text custom-gradient text-2xl font-bold`}
+                >
+                  ideias em realidade
+                </span>
+                , entre em contato!
+              </h2>
+            </aside>
           </motion.div>
-          <div className="flex flex-col gap-3 xl:w-1/2">
+          <div className="flex flex-col gap-5 lg:self-center xl:w-1/2 lg:h-[700px]">
             <WhatsAppContainer />
             <EmailContainer />
             <LinkedInContainer />
@@ -81,4 +66,4 @@ export const Contacts = (): JSX.Element => {
       </section>
     </>
   );
-};
+}
