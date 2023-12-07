@@ -1,10 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/*   const scale: MotionValue<number> = useTransform(scrollYProgress, [0, 1], [0.1 , 0.9]) */
 
 @layer components {
   .body {
-    @apply w-screen min-h-full relative z-0 flex flex-col justify-center items-center overflow-x-hidden bg-gray-i-900 text-white;
+    @apply w-screen min-h-full z-0 flex flex-col justify-center items-center overflow-x-hidden bg-gray-i-900 text-white;
   }
 
   .custom-gradient {
@@ -19,7 +20,7 @@
   }
 
   .img-projects-bg {
-    background-image: url("../public/header-bg.svg")
+    background-image: url("../public/header-bg.png")
   }
 
   .img-code-bg {
@@ -33,4 +34,6 @@
   .scrollbar-thumb-gradient::-webkit-scrollbar-thumb {
     @apply custom-scroll-gradient
   }
+
+  
 }

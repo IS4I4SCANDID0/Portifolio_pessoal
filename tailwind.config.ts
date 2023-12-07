@@ -11,13 +11,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-    
       textColor: {
         "stack-text": "#adb5bd"
       },
       colors: {
         "gray-i-900": "#1F2226",   
       },
+      // screens: {
+      //   "iPadAir": "820px"
+      // },
+      fontFamily: {
+        raleway: ["var(--font-family-secondary)"]
+      }
     },
   },
   plugins: [

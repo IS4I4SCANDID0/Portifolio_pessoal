@@ -12,7 +12,7 @@ import {
   useAnimation,
   useInView,
 } from "framer-motion";
-import { useRef, useState } from "react";
+import { MutableRefObject, useRef, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { TAnimatedTextProps } from "@/interface/animations.interrfaces";
@@ -25,7 +25,7 @@ const typingVariants: Variants = {
 
 const AnimatedText = ({ text, el: Wrapper = "p" }: TAnimatedTextProps) => {
   const textArray = Array.isArray(text) ? text : [text];
-  const ref = useRef(null);
+  const ref: MutableRefObject<null> = useRef(null);
   const isInView = useInView(ref, { amount: 0.5 });
 
   return (
@@ -40,10 +40,13 @@ const AnimatedText = ({ text, el: Wrapper = "p" }: TAnimatedTextProps) => {
         className="leading-tight"
       >
         {textArray.map((line, lineIndex) => (
+          
           <span className="block" key={`line_${lineIndex}`}>
             {line.split(" ").map((word, wordIndex) => (
+
               <span className="inline-block" key={`word_${wordIndex}`}>
                 {word.split("").map((char, charIndex) => (
+                  
                   <motion.span
                     className="inline-block"
                     variants={typingVariants}
@@ -52,6 +55,7 @@ const AnimatedText = ({ text, el: Wrapper = "p" }: TAnimatedTextProps) => {
                     {char}
                   </motion.span>
                 ))}
+
                 <span className="inline-block">&nbsp;</span>
               </span>
             ))}
@@ -65,8 +69,7 @@ const AnimatedText = ({ text, el: Wrapper = "p" }: TAnimatedTextProps) => {
 export const HomeSection = (): JSX.Element => {
   const iPAdStyle = useMediaScreen(820);
   const [isClicked, setIsClicked] = useState<boolean>(false);
-  const animateText: string =
-    "Paixão por transformar ideias em realidade usando tecnologia";
+  const animateText: string = "Paixão por transformar ideias em realidade usando tecnologia!";
 
   return (
     <section
@@ -96,7 +99,7 @@ export const HomeSection = (): JSX.Element => {
           <div className="mt-4 flex w-full flex-col items-center gap-5 self-center border-2 border-orange-600 px-0 py-12 md:flex-row">
             <Link
               href="#projetos"
-              className={`flex h-[40px] w-full items-center justify-center md:h-[45px] lg:min-w-[260px] lg:max-w-[260px] ${
+              className={`flex h-[40px] w-full items-center justify-center md:h-[45px] lg:min-w-[235px] lg:max-w-[260px] lg:font-semibold ${
                 iPAdStyle ? "w-[295px]" : ""
               } custom-gradient rounded-3xl text-center text-lg font-medium text-gray-950 md:px-2`}
             >
@@ -107,7 +110,7 @@ export const HomeSection = (): JSX.Element => {
               href={"https://github.com/IS4I4SCANDID0/portifolio_pessoal_v2"}
               target="_blank"
               onClick={() => setIsClicked(true)}
-              className={`h-[40px] w-full md:h-[45px] lg:min-w-[260px]  lg:max-w-[264px] ${
+              className={`h-[40px] w-full md:h-[45px] lg:min-w-[233px]  lg:max-w-[260px] ${
                 iPAdStyle ? "w-[295px]" : ""
               } flex items-center justify-center rounded-3xl border-2 border-white text-center text-lg font-normal md:px-2 ${
                 isClicked
@@ -119,10 +122,9 @@ export const HomeSection = (): JSX.Element => {
             </Link>
 
             <Link
-              // href={"https://github.com/IS4I4SCANDID0"}
-              href={"ojsdns"}
+              href={"https://github.com/IS4I4SCANDID0"}
               target="_blank"
-              className={`flex h-[40px] w-full flex-row items-center justify-center gap-4 rounded-3xl border-2 border-white py-2 text-center text-lg font-normal md:px-2 lg:h-[45px] lg:max-w-[186px] ${
+              className={`flex h-[40px] w-full flex-row items-center justify-center gap-4 rounded-3xl border-2 border-white py-2 text-center text-lg font-normal md:px-2 lg:h-[45px] lg:min-w-fit lg:max-w-[177px] ${
                 iPAdStyle ? "max-w-[195px]" : ""
               } lg:px-5 ${
                 isClicked
@@ -145,18 +147,3 @@ export const HomeSection = (): JSX.Element => {
     </section>
   );
 };
-
-// function MyComponent() {
-//   const [isClicked, setIsClicked] = useState(false);
-
-//   return (
-//     <Link
-//       href={"https://github.com/IS4I4SCANDID0/portifolio_pessoal_v2"}
-//       target="_blank"
-//       className={`w-full py-2 text-center rounded-2xl text-lg border-2 border-white font-medium ${isClicked ? 'bg-white' : ''}`}
-//       onClick={() => setIsClicked(true)}
-//     >
-//       Ver código fonte do portifólio
-//     </Link>
-//   );
-// }

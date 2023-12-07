@@ -13,57 +13,55 @@ import { useEffect, useRef, useState } from "react";
 import { WhatsAppContainer } from "../ContactsContainer/WhatsApp";
 import { EmailContainer } from "../ContactsContainer/Email";
 import { LinkedInContainer } from "../ContactsContainer/LinkedIn";
+import { Raleway } from "next/font/google";
+import { NextFont } from "next/dist/compiled/@next/font";
+import { IFontProps } from "@/interface/project.interface";
 
 export const Contacts = (): JSX.Element => {
-  const ref = useRef<HTMLElement | null >(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll();
-  const scale: MotionValue<number> = useTransform(scrollYProgress, [0, 1], [0.1 , 0.9])
-
-  // !DEBUGAR  A ANIMAÇÃO DE SCALE
+  const scale: MotionValue<number> = useTransform(scrollYProgress, [0, 1], [0.1, 0.9]);
+  //!RECONSTRUIR SE FOR RPECISO
   return (
     <>
       <div className={`custom-gradient h-[0.15rem] w-full`}></div>
       <section
         id="contatos"
-        className="flex static z-10 h-[56.25rem] w-screen flex-col items-center justify-between border-2 border-sky-400 bg-gray-i-900 lg:flex-row lg:pt-40"
+        className="flex h-[56.25rem] w-screen flex-col items-center justify-between border-2 pt-40 border-sky-400 bg-gray-i-900 lg:flex-row lg:pt-40"
       >
-        <div className="mx-auto my-auto flex w-11/12 flex-col self-center border-2 border-red-600 lg:h-full lg:w-[65%] lg:flex-row lg:items-center lg:justify-between"
-          // ref={ref}
-        >
-          <motion.div
-            className={`h-48 max-w-fit border-2 lg:h-[700px] lg:w-[400px] lg:self-center lg:border-2 lg:border-yellow-400`}
-            style={{ scale }}
-          >
-            <aside className="max-w-[25rem] max-h-max lg:gap-[1rem] border-2 border-violet-400 lg:sticky lg:top-32 lg:z-30"
-              ref={ref}
+        <div className="h-[80%] max-w-11/12 lg:min-h-max lg:w-[65%] px-4 mx-auto border-2 border-purple-500 lg:flex lg:justify-between">
+          {/* <div */}
+            {/* className="flex w-full flex-col mx-auto border-2 border-red-600 lg:h-full  lg:flex-row lg:items-start lg:justify-between lg:px-0" */}
+          {/* > */}
+            <motion.div
+              className={`border-2 lg:min-h-full lg:border-2 lg:border-yellow-400 flex items-start gap-5 lg:w-[45%]`}
               // style={{ scale }}
             >
-              <h2
-                className={`max-w-fit border-2 border-emerald-400 text-2xl font-semibold `}
-                // style={{ scale }}
-              >
-                Vamos
-                <span
-                  className={`custom-text custom-gradient text-2xl font-bold`}
+              <aside className="border-4 border-violet-600 self-start lg:grid  lg:sticky lg:top-32 lg:gap-[1rem]">
+                <h2
+                  className={`lg:block border-4 border-emerald-500 text-2xl lg:text-3xl font-semibold`}
                 >
-                  transformar suas
-                </span>
-                <span
-                  className={`custom-text custom-gradient text-2xl font-bold`}
-                >
-                  ideias em realidade
-                </span>
-                , entre em contato!
-              </h2>
-            </aside>
-          </motion.div>
-          <div className="flex flex-col gap-5 lg:self-center xl:w-1/2 lg:h-[700px]">
-            <WhatsAppContainer />
-            <EmailContainer />
-            <LinkedInContainer />
+                  Vamos
+
+                  <span className={` text-2xl lg:text-3xl font-bold`}>
+                    transformar suas
+                  </span>
+
+                  <span className={` text-2xl lg:text-3xl font-bold`}>
+                    ideias em realidade
+                  </span>
+                  , entre em contato!
+                </h2>
+              </aside>
+            </motion.div>
+            <div className="flex flex-col gap-5 lg:h-full lg:max-w-[45%] lg:self-center xl:max-w-[50%] border-2 border-lime-500">
+              <WhatsAppContainer />
+              <EmailContainer />
+              <LinkedInContainer />
+            </div>
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </>
   );
-}
+};

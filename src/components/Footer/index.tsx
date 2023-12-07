@@ -16,7 +16,7 @@ export const Footer = (): JSX.Element => {
             Espero que tenha gostado da experiência!
           </p>
           <p className="text-sm md:text-base font-normal text-zinc-400 lg:text-lg">
-            Me siga na redes sociais. Vamos criar conexões e conversar
+            Me siga nas redes sociais. Vamos criar conexões e conversar.
           </p>
         </div>
         <div className="flex max-w-[280px] border-2 border-indigo-400 items-center justify-between gap-6 mt-7">

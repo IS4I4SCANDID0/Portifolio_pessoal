@@ -1,5 +1,4 @@
 import { IconType } from "react-icons/lib";
-import { ReactNode } from "react";
 
 export interface ChildrenProps {
   children: React.ReactNode
