@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 import tailwindScrollbar from 'tailwind-scrollbar';
-import prettierPluginTailwindcss from 'prettier-plugin-tailwindcss';
+
 
 const config: Config = {
   mode: "jit",
@@ -17,12 +17,6 @@ const config: Config = {
       colors: {
         "gray-i-900": "#1F2226",   
       },
-      // screens: {
-      //   "iPadAir": "820px"
-      // },
-      fontFamily: {
-        raleway: ["var(--font-family-secondary)"]
-      }
     },
   },
   plugins: [

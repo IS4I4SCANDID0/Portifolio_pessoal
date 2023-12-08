@@ -1,18 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*   const scale: MotionValue<number> = useTransform(scrollYProgress, [0, 1], [0.1 , 0.9]) */
+
 
 @layer components {
   .body {
-    @apply w-screen min-h-full z-0 flex flex-col justify-center items-center overflow-x-hidden bg-gray-i-900 text-white;
+    @apply w-screen min-h-full z-0 flex flex-col justify-center items-center bg-gray-i-900 text-white;
   }
 
   .custom-gradient {
     @apply bg-gradient-to-r from-teal-400 from-20% to-blue-700 to-80%
-    /* @apply bg-gradient-to-r from-purple-700 from-20% to-cyan-500 to-80%; */
-    /* @apply bg-gradient-to-r from-purple-700 from-20% to-blue-500 to-80%; */
-    /* @apply bg-gradient-to-r from-violet-800 to-blue-700; */
   }
 
   .custom-text {

@@ -1,21 +1,15 @@
-"use client"
-import Link from "next/link";
+import { NextPage } from "next"
+import Link from "next/link"
 
-const NotFoundPage = (): JSX.Element => {
+const NotFoundPage: NextPage = (): JSX.Element => {
   return (
-    <main className={`body bg-gray-500`}>
-      <div className="bg-red-700">
-        <h1 className="text-slate-500">Oops! Erro 404</h1>
-        <p>Não conseguimos encontrar a página pesquisada</p>
-        <Link
-          href={"/"}
-          className={`custom-gradient rounded-3xl text-lg font-medium`}
-        >
-          Voltar
-        </Link>
-      </div>
+    <main className="bg-slate-600">
+      <h1>Oopps! Não encontramos essa página</h1>
+      <p>Esta ação parece não ter sido intencional, pois esse portifólio é construído em uma única página com links externos para negavação</p>
+      <p>Mas fique tranquilo você pode voltar para o portifólio sem problemas!</p>
+      <Link href="/" aria-label="Botão voltar para o início">Volte a explorar</Link>
     </main>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

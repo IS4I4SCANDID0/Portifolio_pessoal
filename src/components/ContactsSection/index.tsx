@@ -27,27 +27,27 @@ export const Contacts = (): JSX.Element => {
       <div className={`custom-gradient h-[0.15rem] w-full`}></div>
       <section
         id="contatos"
-        className="flex h-[56.25rem] w-screen flex-col items-center justify-between border-2 pt-40 border-sky-400 bg-gray-i-900 lg:flex-row lg:pt-40"
+        className="flex w-screen flex-col items-center justify-between border-2 pt-40 border-sky-400 bg-gray-i-900 lg:flex-row"
       >
-        <div className="h-[80%] max-w-11/12 lg:min-h-max lg:w-[65%] px-4 mx-auto border-2 border-purple-500 lg:flex lg:justify-between">
+        <div className="max-w-11/12 lg:min-h-max lg:w-[80%] px-4 mx-auto border-2 border-purple-500 lg:flex lg:justify-between">
           {/* <div */}
             {/* className="flex w-full flex-col mx-auto border-2 border-red-600 lg:h-full  lg:flex-row lg:items-start lg:justify-between lg:px-0" */}
           {/* > */}
             <motion.div
-              className={`border-2 lg:min-h-full lg:border-2 lg:border-yellow-400 flex items-start gap-5 lg:w-[45%]`}
+              className={`border-2 lg:border-2 lg:border-yellow-400 lg:w-[45%]`}
               // style={{ scale }}
             >
-              <aside className="border-4 border-violet-600 self-start lg:grid  lg:sticky lg:top-32 lg:gap-[1rem]">
+              <aside className="border-4 border-violet-600 lg:sticky lg:top-32 gap-[1rem] lg:grid">
                 <h2
-                  className={`lg:block border-4 border-emerald-500 text-2xl lg:text-3xl font-semibold`}
+                  className={`border-4 border-emerald-500 text-2xl font-semibold`}
                 >
                   Vamos
 
-                  <span className={` text-2xl lg:text-3xl font-bold`}>
+                  <span className={` text-2xl font-bold`}>
                     transformar suas
                   </span>
 
-                  <span className={` text-2xl lg:text-3xl font-bold`}>
+                  <span className={` text-2xl font-bold`}>
                     ideias em realidade
                   </span>
                   , entre em contato!

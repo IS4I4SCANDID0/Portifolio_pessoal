@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { Roboto_Flex } from "next/font/google";
 import { NextFont } from "next/dist/compiled/@next/font";
-import { getProjectsList } from "@/lib/fetchData";
+import { getProjectsList } from "@/projects/fetchData";
 
 const raleway: NextFont = Roboto_Flex({
   subsets: ["latin"],
