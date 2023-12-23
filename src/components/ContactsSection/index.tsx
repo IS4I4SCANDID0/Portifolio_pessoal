@@ -20,48 +20,45 @@ import { IFontProps } from "@/interface/project.interface";
 export const Contacts = (): JSX.Element => {
   const ref = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll();
-  const scale: MotionValue<number> = useTransform(scrollYProgress, [0, 1], [0.1, 0.9]);
-  //!RECONSTRUIR SE FOR RPECISO
+  const scale: MotionValue<number> = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0.1, 0.9],
+  );
+
   return (
     <>
       <div className={`custom-gradient h-[0.15rem] w-full`}></div>
       <section
         id="contatos"
-        className="flex w-screen flex-col items-center justify-between border-2 pt-40 border-sky-400 bg-gray-i-900 lg:flex-row"
+        className="flex max-w-full flex-col items-center justify-center py-56 border-2 border-sky-400 bg-gray-i-900 lg:flex-row"
       >
-        <div className="max-w-11/12 lg:min-h-max lg:w-[80%] px-4 mx-auto border-2 border-purple-500 lg:flex lg:justify-between">
-          {/* <div */}
-            {/* className="flex w-full flex-col mx-auto border-2 border-red-600 lg:h-full  lg:flex-row lg:items-start lg:justify-between lg:px-0" */}
-          {/* > */}
-            <motion.div
-              className={`border-2 lg:border-2 lg:border-yellow-400 lg:w-[45%]`}
-              // style={{ scale }}
-            >
-              <aside className="border-4 border-violet-600 lg:sticky lg:top-32 gap-[1rem] lg:grid">
-                <h2
-                  className={`border-4 border-emerald-500 text-2xl font-semibold`}
-                >
-                  Vamos
-
-                  <span className={` text-2xl font-bold`}>
-                    transformar suas
-                  </span>
-
-                  <span className={` text-2xl font-bold`}>
-                    ideias em realidade
-                  </span>
-                  , entre em contato!
-                </h2>
-              </aside>
-            </motion.div>
-            <div className="flex flex-col gap-5 lg:h-full lg:max-w-[45%] lg:self-center xl:max-w-[50%] border-2 border-lime-500">
-              <WhatsAppContainer />
-              <EmailContainer />
-              <LinkedInContainer />
-            </div>
+        <div className="w-[95%] flex flex-col lg:px-4 justify-center self-center mx-auto border-2 border-purple-500 lg:flex-row lg:max-w-[1300px]"
+          ref={ref}
+        >
+          <motion.div
+            className={`border-2 w-[300px] border-yellow-400 lg:max-w-[40%]`}
+            style={{ scale }}
+          >
+            <aside className="border-4 border-violet-600 xl:sticky xl:top-32 xl:bottom-0 gap-[1rem] lg:grid">
+              <h2
+                className={`border-4 border-emerald-500 text-[1.75rem] font-semibold`}
+              >
+                Vamos 
+                <span className={`custom-text custom-gradient text-[1.75rem] font-extrabold`}> transformar suas </span>
+                <span className={`custom-text custom-gradient text-[1.75rem] font-extrabold`}> ideias em realidade</span>
+                , entre em contato!
+              </h2>
+            </aside>
+          </motion.div>
+          <div className="flex max-w-full flex-col gap-5 lg:h-full lg:max-w-[45%] lg:self-center border-2 border-lime-500">
+            <WhatsAppContainer />
+            <EmailContainer />
+            <LinkedInContainer />
           </div>
-        {/* </div> */}
+        </div>
       </section>
     </>
   );
 };
+// ! --> Ajustar as larguras da seçãod e contatos <---

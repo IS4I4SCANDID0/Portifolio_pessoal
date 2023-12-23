@@ -9,11 +9,9 @@ const robotoFlex = Roboto_Flex({
 })
 
 export const EmailContainer = ({ Icon }: IconProps): JSX.Element => {
-  // ! MUDAR O TAMNHO DA FONTE NOS TABLETS COM O HOOK PERSONALIZADO OU CLASSE DO TAILWINDCSS
-
   return (
     <div className="max-w-full lg:p-3 mt-4 flex items-center lg:mt-0">
-      <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-r from-neutral-900 from-20% to-black to-80% p-4">
+      <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-tr from-neutral-900 from-20% to-stone-950 to-80% p-4">
         <IoMailOpenOutline className="fill-white" size={30} />
       </div>
       <div className="flex flex-col gap-3">

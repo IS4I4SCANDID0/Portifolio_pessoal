@@ -7,11 +7,13 @@ export const Footer = (): JSX.Element => {
   return (
     <footer
       id="rodape"
-      className="flex h-96 w-screen flex-col items-center justify-center bg-gray-950 text-white"
+      className="flex h-[315px] w-screen flex-col items-center justify-center bg-gray-950 text-white"
     >
       <div className="mx-auto flex w-11/12 flex-col items-center gap-6 lg:max-w-[1250px] lg:flex-row lg:justify-between">
         <div className="flex flex-col text-center lg:text-left">
-          <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold">Obrigado por visitar!</h2>
+          <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold">
+            Obrigado por visitar!
+          </h2>
           <p className="text-sm md:text-base font-normal text-zinc-400 lg:text-lg">
             Espero que tenha gostado da experiência!
           </p>

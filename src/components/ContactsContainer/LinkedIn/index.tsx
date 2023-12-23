@@ -15,7 +15,7 @@ export const LinkedInContainer = ({ Icon }: IconProps): JSX.Element => {
 
   return (
     <div className="mt-4 flex max-w-full lg:p-3 items-center lg:mt-0">
-      <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-r from-blue-600 from-20% to-blue-800 to-80% p-4">
+      <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-tr from-blue-600 from-20% to-blue-800 to-80% p-4">
         <FaLinkedinIn className="fill-white" size={30} />
       </div>
       <div className="flex flex-col gap-3">

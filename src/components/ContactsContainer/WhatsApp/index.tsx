@@ -12,7 +12,7 @@ const robotoFlex: NextFont = Roboto_Flex({
 export const WhatsAppContainer = ({ Icon }: IconProps): JSX.Element => {
   return (
     <div className="mt-4 flex max-w-full items-center lg:p-3 lg:mt-0 lg:pt-0">
-      <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-r from-green-400 from-20% to-green-500 to-80% p-4">
+      <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-tr from-green-400 from-20% to-green-500 to-80% p-4">
         <SiWhatsapp className="fill-white" size={30} />
       </div>
       <div className="flex flex-col gap-3">

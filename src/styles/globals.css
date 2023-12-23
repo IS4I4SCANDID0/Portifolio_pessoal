@@ -5,7 +5,7 @@
 
 @layer components {
   .body {
-    @apply w-screen min-h-full z-0 flex flex-col justify-center items-center bg-gray-i-900 text-white;
+    @apply max-w-[100vw] min-h-screen z-0 flex flex-col justify-center items-center bg-gray-i-900 text-white px-1;
   }
 
   .custom-gradient {
@@ -20,6 +20,10 @@
     background-image: url("../public/header-bg.png")
   }
 
+  .bg-text-gradient {
+    background-image: -o-linear-gradient();
+  }
+
   .img-code-bg {
     background-image: url("../public/pexels-markus-spiske-12081657.jpg");
   }
@@ -32,5 +36,8 @@
     @apply custom-scroll-gradient
   }
 
+  /* .bg-position {
+    @apply bg-right -10% center
+  } */
   
 }

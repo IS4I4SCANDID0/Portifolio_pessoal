@@ -1,6 +1,3 @@
-// import { IGetStaticRepos, IRepository } from "@/interface/project.interface"
-// import { GetStaticProps } from "next"
-
 import { IRepository } from "@/interface/project.interface"
 
 export const getProjectsList = async (): Promise<IRepository[]> => {

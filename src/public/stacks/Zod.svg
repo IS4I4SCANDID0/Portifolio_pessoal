@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="203" viewBox="0 0 256 203">
-  <rect x="0" y="0" width="256" height="203" fill="none" stroke="none" />
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 256 203">
+  <rect x="0" y="0" width="85" height="85" fill="none" stroke="none" />
   <defs>
     <filter id="logosZod0" width="105.2%" height="106.5%" x="-2.2%" y="-2.8%" filterUnits="objectBoundingBox">
       <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>

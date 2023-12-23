@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <rect x="0" y="0" width="32" height="32" fill="none" stroke="none" />
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 32 32">
+  <rect x="0" y="0" width="85" height="85" fill="none" stroke="none" />
   <defs>
     <linearGradient id="vscodeIconsFileTypePython0" x1="-133.268" x2="-133.198" y1="-202.91" y2="-202.84" gradientTransform="matrix(189.38 0 0 189.81 25243.061 38519.17)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#387eb8"/>

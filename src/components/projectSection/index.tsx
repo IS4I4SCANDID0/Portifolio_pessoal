@@ -3,33 +3,29 @@ import { Roboto_Flex } from "next/font/google";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { getProjectsList } from "@/projects/fetchData";
 
-const raleway: NextFont = Roboto_Flex({
+const robotoFlex: NextFont = Roboto_Flex({
   subsets: ["latin"],
   weight: ["500"],
 });
 
-
-
-
 export const SectionProjects = async (): Promise<JSX.Element> => {
   const repos = await getProjectsList()  
-  // console.log('test', typeof repos) 
-
+ 
   return (
     <>
-      <div className={`w-full h-[0.15rem] custom-gradient`}></div>
+      <div className={`max-w-full h-[0.15rem] custom-gradient`}></div>
       <section
         id="projetos"
-        className="flex w-screen flex-col items-center justify-center bg-gray-950 py-14"
+        className="flex w-full flex-col items-center justify-center bg-gray-950 py-14"
       >
-        <div className="flex w-11/12 flex-col items-center justify-center gap-6 border-2 border-pink-400 lg:max-w-[1250px]">
+        <div className="flex w-[95%] flex-col items-center justify-center gap-6 border-2 border-pink-400 lg:max-w-[1300px]">
           <h2 className="self-start text-3xl font-bold my-3">
             Meus projetos
           </h2>
           <p className="self-start text-sm lg:text-lg mb-10">
             Aqui estão meus principais projetos
           </p>
-          <ul className="flex w-full flex-col gap-16 self-start py-7 md:self-center lg:grid lg:grid-cols-2">
+          <ul className="flex w-full flex-col gap-16 self-start py-7 md:self-center lg:grid lg:grid-cols-2 lg:gap-20">
             {repos &&
               repos?.map?.(({ id, name, language, html_url }, index) => (
                 <li
@@ -47,18 +43,18 @@ export const SectionProjects = async (): Promise<JSX.Element> => {
                     {name}
                   </h2>
                   {language ? (
-                    <h3 className={`${raleway.className} text-zinc-400`}>
-                      Linguagem Primária<span className="font-semibold">:</span> <span className="bg-zinc-900 p-2 rounded-md">{language}</span>
+                    <h3 className={`${robotoFlex.className} text-zinc-400`}>
+                      Linguagem Primária<span className="font-semibold">:</span> <span className="bg-zinc-900 p-2 rounded-md ml-1">{language}</span>
                     </h3>
                   ) : (
-                    <h3 className={`${raleway.className} text-zinc-400`}>
+                    <h3 className={`${robotoFlex.className} text-zinc-400`}>
                       Linguagem Primária: Linguagem primária não identificada
                     </h3>
                   )}
                   <div className={`flex max-w-fit items-center gap-2 text-zinc-400 hover:brightness-150 transition duration-150`}>
                     <FaGithub size={25} />
                     <a
-                      className={`${raleway.className}`}
+                      className={`${robotoFlex.className}`}
                       href={html_url}
                       target="_blank"
                     >

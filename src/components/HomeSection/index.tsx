@@ -3,15 +3,7 @@ import { Stack } from "@/components/stack";
 import { myStacks } from "@/utils/stacksMock";
 import { StackCard } from "../stackCards";
 import Image from "next/image";
-import {
-  LazyMotion,
-  Variants,
-  domAnimation,
-  m,
-  motion,
-  useAnimation,
-  useInView,
-} from "framer-motion";
+import { LazyMotion, domAnimation, Variants, m, useInView } from "framer-motion";
 import { MutableRefObject, useRef, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
@@ -29,57 +21,57 @@ const AnimatedText = ({ text, el: Wrapper = "p" }: TAnimatedTextProps) => {
   const isInView = useInView(ref, { amount: 0.5 });
 
   return (
-    <Wrapper>
-      <span className="sr-only">{text}</span>
-      <motion.span
-        ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ staggerChildren: 0.08 }}
-        aria-hidden
-        className="leading-tight"
-      >
-        {textArray.map((line, lineIndex) => (
-          
-          <span className="block" key={`line_${lineIndex}`}>
-            {line.split(" ").map((word, wordIndex) => (
+    <LazyMotion features={domAnimation}>
+      <Wrapper>
+        <span className="sr-only">{text}</span>
+        <m.span
+            ref={ref}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ staggerChildren: 0.08 }}
+            aria-hidden
+            className="leading-tight"
+          >
+          {textArray.map((line, lineIndex) => (
+            <span className="block" key={`line_${lineIndex}`}>
+              {line.split(" ").map((word, wordIndex) => (
+                <span className="inline-block" key={`word_${wordIndex}`}>
+                  {word.split("").map((char, charIndex) => (
+                    <m.span
+                      className="inline-block"
+                      variants={typingVariants}
+                      key={`char_${charIndex}`}>
+                      {char}
+                    </m.span>
+                  ))}
 
-              <span className="inline-block" key={`word_${wordIndex}`}>
-                {word.split("").map((char, charIndex) => (
-                  
-                  <motion.span
-                    className="inline-block"
-                    variants={typingVariants}
-                    key={`char_${charIndex}`}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-
-                <span className="inline-block">&nbsp;</span>
-              </span>
-            ))}
-          </span>
-        ))}
-      </motion.span>
-    </Wrapper>
+                  <span className="inline-block">&nbsp;</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </m.span>
+      </Wrapper>
+    </LazyMotion>
   );
 };
 
 export const HomeSection = (): JSX.Element => {
-  const iPAdStyle = useMediaScreen(820);
+  const iPadStyle = useMediaScreen(820);
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const animateText: string = "Paixão por transformar ideias em realidade usando tecnologia!";
 
   return (
     <section
       id="inicio"
-      className={`lg:img-projects-bg z-0 flex w-screen flex-col pb-4 lg:mt-0 lg:bg-fixed lg:bg-right lg:bg-no-repeat lg:pt-36`}
+      className={`z-0 flex w-[95%] max-h-max flex-col lg:w-full lg:img-projects-bg lg:bg-fixed lg:bg-right lg:bg-no-repeat border-2 border-green-500 bg-gray-i-900`}
     >
-      <section className="flex flex-col items-center justify-center border-2 border-red-600 lg:max-w-[1250px] lg:self-center">
-        <div className="flex max-w-[91.666667%] flex-col self-center border-2 border-blue-500 lg:max-w-[60%] lg:self-start">
-          <div className="w-full gap-2 self-center">
-            <div className="mb-8 flex w-full items-center gap-2 self-start md:w-2/3">
+      <div
+        className={`flex flex-col mt-44 max-w-full mx-auto border-2 border-red-600 lg:w-[85rem] lg:max-w-full lg:px-6`}
+      >
+        <div className="w-full flex flex-col mx-auto border-2 border-blue-500 lg:max-w-[550px] xl:max-w-[690px] pb-7 lg:self-start lg:mx-0">
+          <div className="max-w-full gap-2 self-center border-2">
+            <div className="mb-8 flex max-w-full items-center gap-2 self-start md:w-2/3">
               <Image
                 className="transition-brightness h-14 w-14 rounded-full duration-200 ease-in-out hover:brightness-75"
                 src="https://github.com/IS4I4SCANDID0.png"
@@ -87,21 +79,25 @@ export const HomeSection = (): JSX.Element => {
                 width={75}
                 height={75}
               />
-              <h3 className="text-sm font-medium md:text-base ">
+              <h3 className="text-sm font-medium md:text-base tracking-[0.005rem]">
                 Olá, bem-vindo ao meu universo de codificação
               </h3>
             </div>
 
-            <h1 className={`text-3xl font-bold md:text-6xl`}>
+            <h1 className={`text-3xl font-bold xl:text-5xl mb-10`}>
               <AnimatedText text={animateText} />
             </h1>
+            <h6 className="text-sm lg:text-lg text-zinc-400 tracking-[0.005rem]">
+              Explore minha jornada como Desenvolvedor Full-Stack, onde a
+              inovação e a eficiência se encontram. Aprecie a experiência!
+            </h6>
           </div>
-          <div className="mt-4 flex w-full flex-col items-center gap-5 self-center border-2 border-orange-600 px-0 py-12 md:flex-row">
+          <div className="mt-4 flex min-w-full max-w-full flex-col items-center gap-8 lg:gap-6 self-center border-2 border-orange-600 px-0 py-12 md:flex-row md:gap-5">
             <Link
               href="#projetos"
-              className={`flex h-[40px] w-full items-center justify-center md:h-[45px] lg:min-w-[235px] lg:max-w-[260px] lg:font-semibold ${
-                iPAdStyle ? "w-[295px]" : ""
-              } custom-gradient rounded-3xl text-center text-lg font-medium text-gray-950 md:px-2`}
+              className={`flex h-[50px] w-full items-center justify-center xl:min-w-max xl:max-w-[250px] lg:font-bold ${
+                iPadStyle ? "w-[295px]" : ""
+              } custom-gradient rounded-3xl text-center text-lg font-semibold text-gray-950 md:px-2`}
             >
               Ver projetos
             </Link>
@@ -110,9 +106,9 @@ export const HomeSection = (): JSX.Element => {
               href={"https://github.com/IS4I4SCANDID0/portifolio_pessoal_v2"}
               target="_blank"
               onClick={() => setIsClicked(true)}
-              className={`h-[40px] w-full md:h-[45px] lg:min-w-[233px]  lg:max-w-[260px] ${
-                iPAdStyle ? "w-[295px]" : ""
-              } flex items-center justify-center rounded-3xl border-2 border-white text-center text-lg font-normal md:px-2 ${
+              className={`h-[50px] w-full xl:max-w-[250px] ${
+                iPadStyle ? "w-[295px]" : ""
+              } flex items-center justify-center rounded-3xl border-2 border-white lg:min-w-fit text-center text-lg font-semibold md:px-4 ${
                 isClicked
                   ? "bg-white text-lg font-medium text-gray-950"
                   : "bg-transparent"
@@ -120,12 +116,12 @@ export const HomeSection = (): JSX.Element => {
             >
               Ver código do portifólio
             </Link>
-
+ 
             <Link
               href={"https://github.com/IS4I4SCANDID0"}
               target="_blank"
-              className={`flex h-[40px] w-full flex-row items-center justify-center gap-4 rounded-3xl border-2 border-white py-2 text-center text-lg font-normal md:px-2 lg:h-[45px] lg:min-w-fit lg:max-w-[177px] ${
-                iPAdStyle ? "max-w-[195px]" : ""
+              className={`flex h-[50px] w-full flex-row items-center justify-center gap-4 lg:gap-2 xl:gap-5 rounded-3xl border-2 border-white py-2 text-center text-lg font-semibold md:px-2 lg:px-1 xl:px-3 lg:max-w-fit xl:w-fit xl:max-w-[177px] ${
+                iPadStyle ? "max-w-[195px]" : ""
               } lg:px-5 ${
                 isClicked
                   ? "bg-white text-lg font-medium text-gray-950"
@@ -133,17 +129,17 @@ export const HomeSection = (): JSX.Element => {
               }`}
               onClick={() => setIsClicked(true)}
             >
-              Ver GitHub
+              GitHub
               <FaGithub size={30} />
             </Link>
           </div>
-          <Stack>
-            {myStacks.map((stack, index) => (
-              <StackCard key={index} title={stack.title!} icon={stack.img} />
-            ))}
-          </Stack>
+        <Stack>
+          {myStacks.map((stack, index) => (
+            <StackCard key={index} title={stack.title!} icon={stack.img} />
+          ))}
+        </Stack>
         </div>
-      </section>
+      </div>
     </section>
   );
 };

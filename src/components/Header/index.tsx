@@ -1,12 +1,12 @@
 "use client";
 import { useCallback, useState } from "react";
-import { Poppins, Raleway } from "next/font/google";
 import { LiaBarsSolid } from "react-icons/lia";
 import { VscClose } from "react-icons/vsc";
 import { MenuMobile } from "./menuMobile";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+// ! ADICIONAR UMA ANIMAÇÃO NO BOTÃO DO MENU MOBILE E NO FECHAMENTO PARA ACOMPANAHAR A MESMA ANIMAÇÃO DA ABERTURA  
 export const Header = (): JSX.Element => {
   const [isDrop, setIsDrop] = useState<boolean>(false);
 
@@ -14,28 +14,31 @@ export const Header = (): JSX.Element => {
     setIsDrop(!isDrop);
   }, [isDrop]);
 
+  // !resolver o bug da abertura do  mobile
   return (
     <>
-      <header className="fixed z-20 flex h-24 w-screen flex-col items-center justify-center gap-4 bg-gray-950 text-white md:p-0">
-        <div className="flex w-11/12 items-center justify-between gap-5 px-1 lg:max-w-[1250px] lg:px-0">
-          <h2 className="text-xl font-semibold md:text-2xl">Isaias Candido</h2>
-          <nav className="hidden w-2/4 items-center justify-between font-normal lg:flex lg:flex-row lg:w-2/5">
-            <Link className="text-xl" href="#inicio" role="button">
+      <header className="fixed z-20 h-24 py-10 w-screen justify-center gap-4 bg-gray-950 text-white border-2 border-yellow-300">
+        <div className="flex w-[95%] items-center justify-between gap-5 px-2 lg:w-[85rem] lg:max-w-full lg:px-7 mx-auto border-2 border-blue-500">
+          {/* <div className="border-2 border-purple-500 w-fit px-[0.142rem]"> */}
+            <h2 className="text-xl font-semibold md:text-2xl">Isaias Candido</h2>
+          {/* </div> */}
+          <div className="hidden lg:w-2/4 items-center justify-between font-normal lg:flex lg:max-w-[500px] border-2 border-red-600">
+            <Link className="text-base md:text-xl font-medium" href="#inicio" role="button">
               Início
             </Link>
 
-            <Link className="text-xl" href="#projetos" role="button">
+            <Link className="text-base md:text-xl font-medium" href="#projetos" role="button">
               Projetos
             </Link>
 
-            <Link className="text-xl" href="#contatos" role="button">
+            <Link className="text-base md:text-xl font-medium" href="#contatos" role="button">
               Contatos
             </Link>
 
-            <Link className="text-xl" href="#rodape" role="button">
+            <Link className="text-base md:text-xl font-medium" href="#rodape" role="button">
               Mídias Sociais
             </Link>
-          </nav>
+          </div>
           <motion.button
             type="button"
             className="lg:hidden"
@@ -60,12 +63,9 @@ export const Header = (): JSX.Element => {
         </div>
         <MenuMobile isDrop={isDrop} handleDrop={handleDrop} />
         {!isDrop && (
-          <div
-            className={`custom-gradient fixed left-0 right-0 top-24 z-10 h-[0.1rem] w-full`}
-          ></div>
+          <div className={`custom-gradient fixed left-0 right-0 top-24 z-10 h-[0.1rem] w-full`}></div>
         )}
       </header>
     </>
   );
 };
-//! TERMINAR DE ANIMAR O BOTÃO E ALINHAR O QUE FALTA
