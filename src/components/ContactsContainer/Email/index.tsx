@@ -16,7 +16,7 @@ export const EmailContainer = ({ Icon }: IconProps): JSX.Element => {
       </div>
       <div className="flex flex-col gap-3">
         <h3 className="text-xl font-semibold">Meu Email</h3>
-        <p className={`${robotoFlex.className} text-xs lg:text-base leading-7 tracking-[0.025rem] ${robotoFlex.className} tracking-[0.025rem] font-normal text-zinc-400`}>
+        <p className={`${robotoFlex.className} text-sm lg:text-base leading-7 tracking-[0.025rem] ${robotoFlex.className} tracking-[0.025rem] font-normal text-zinc-400`}>
           Adoraria receber suas ideias, sugestões e feedbacks por e-mail. Sua
           contribuição é valiosa!
         </p>
@@ -26,7 +26,7 @@ export const EmailContainer = ({ Icon }: IconProps): JSX.Element => {
           onClick={() =>
             (window.location.href = "mailto:isaiascandido92@outlook.com")
           }
-          className={`max-w-max text-xs lg:text-base font-normal trackin-[0.025rem] text-zinc-400 hover:custom-text hover:custom-gradient transition duration-150`}
+          className={`max-w-max text-sm lg:text-base font-normal trackin-[0.025rem] text-zinc-400 hover:custom-text hover:custom-gradient transition duration-150`}
         >
           Envie-me um e-mail
         </Link>

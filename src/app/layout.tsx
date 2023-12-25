@@ -23,6 +23,19 @@ export const metadata: Metadata = {
     "Desenvolvedor Back-End",
     "Projetos",
     "Desenvolvedor web",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "PostegreSQL",
+    "Express.js",
+    "Python",
+    "Django",
+    "Django Rest Framework"    
+
   ],
 
   robots: {

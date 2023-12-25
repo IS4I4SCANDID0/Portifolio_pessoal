@@ -7,10 +7,10 @@ export const Footer = (): JSX.Element => {
   return (
     <footer
       id="rodape"
-      className="flex h-[315px] w-screen flex-col items-center justify-center bg-gray-950 text-white"
+      className={`flex h-auto lg:h-[330px] w-screen py-28 flex-col items-center justify-center bg-gray-950 text-white`}
     >
-      <div className="mx-auto flex w-11/12 flex-col items-center gap-6 lg:max-w-[1250px] lg:flex-row lg:justify-between">
-        <div className="flex flex-col text-center lg:text-left">
+      <div className="mx-auto flex w-11/12 flex-col items-center gap-6 lg:max-w-[1300px] lg:flex-row lg:justify-between border-2 border-yellow-400">
+        <div className="flex flex-col text-center lg:text-left border-2 border-red-600">
           <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl font-semibold">
             Obrigado por visitar!
           </h2>
@@ -21,7 +21,7 @@ export const Footer = (): JSX.Element => {
             Me siga nas redes sociais. Vamos criar conexões e conversar.
           </p>
         </div>
-        <div className="flex max-w-[280px] border-2 border-indigo-400 items-center justify-between gap-6 mt-7">
+        <div className="flex max-w-[280px] border-2 border-indigo-400 items-center justify-between gap-6">
           <Link
             href={"https://instagram.com/isaiasmiranda_c"}
             target="_blank"
@@ -31,7 +31,7 @@ export const Footer = (): JSX.Element => {
             className="bg-zinc-900 p-3 rounded-md"
           >
             <SiInstagram
-              size={35}
+              size={25}
               className="fill-zinc-400"
               role="link"
               tabIndex={0}
@@ -48,7 +48,7 @@ export const Footer = (): JSX.Element => {
             className="bg-zinc-900 p-3 rounded-md"
           >
             <FaFacebookF
-              size={35}
+              size={25}
               className="fill-zinc-400"
               role="link"
               tabIndex={0}
@@ -65,7 +65,7 @@ export const Footer = (): JSX.Element => {
             className="bg-zinc-900 p-3 rounded-md"
           >
             <FaLinkedinIn
-              size={35}
+              size={25}
               className="fill-zinc-400"
               role="link"
               tabIndex={0}

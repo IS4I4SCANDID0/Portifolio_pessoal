@@ -25,18 +25,18 @@ export const SectionProjects = async (): Promise<JSX.Element> => {
           <p className="self-start text-sm lg:text-lg mb-10">
             Aqui estão meus principais projetos
           </p>
-          <ul className="flex w-full flex-col gap-16 self-start py-7 md:self-center lg:grid lg:grid-cols-2 lg:gap-20">
+          <ul className="flex w-full flex-col gap-24 self-start py-7 md:self-center lg:grid lg:grid-cols-2 lg:gap-20">
             {repos &&
               repos?.map?.(({ id, name, language, html_url }, index) => (
                 <li
-                  className={`flex h-52 min-w-full max-w-full flex-col gap-10 self-center mt-5`}
+                  className={`flex h-52 min-w-full max-w-full flex-col gap-7 self-center mt-5`}
                   key={id}
                 >
                   <h2
                     className={`flex flex-col gap-4 self-start text-justify text-2xl font-semibold lg:flex-row-reverse lg:text-2xl ${
                       index === 0
                         ? `before:custom-gradient before:flex before:h-8 before:w-11 before:items-center before:justify-center
-                          before:rounded-md before:text-base before:font-semibold before:text-gray-950 before:content-["New"]`
+                          before:rounded-md before:text-base before:font-semibold before:text-gray-950 before:content-["Novo"]`
                         : ""
                     }`}
                   >

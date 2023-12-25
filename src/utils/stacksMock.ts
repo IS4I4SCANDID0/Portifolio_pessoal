@@ -4,23 +4,19 @@ import IconCSS from "../public/stacks/CSS.svg"
 import IconJavaScript from "../public/stacks/JavaScript.svg"
 import IconTypeScript from "../public/stacks/TypeScript.svg"
 import IconReact from "../public/stacks/React.svg"
-// import IconNextJS from "../public/stacks/Next.js.svg"
-// import IconNextJS from "../public/stacks/Next.js-opt1.svg"
 import IconNextJS from "../public/stacks/Next.js-opt2.svg"
 import IconStyledComponents from "../public/stacks/Styled-components.svg"
 import IconSass from "../public/stacks/Sass.svg"
 import IconTailwindCSS from "../public/stacks/TailwindCSS.svg"
 import IconFramerMotion from "../public/stacks/Framer-motion.svg"
-// import IconAxios from "../public/stacks/Axios.svg"
-import IconAxios from "../public/stacks/Axios2.svg"
+import IconAxios from "../public/stacks/Axios.svg"
 import IconReactRouterDOM from "../public/stacks/React-router-dom.svg"
 import IconNodeJS from "../public/stacks/NodeJS.svg"
 import IconZod from "../public/stacks/Zod.svg"
 import IconDotenv from "../public/stacks/Dotenv.svg"
 import IconJWT from "../public/stacks/JSON-web-token.svg"
 import IconExpressJS from "../public/stacks/ExpressJS.svg"
-// import IconDjango from "../public/stacks/Django.svg"
-import IconDjango2 from "../public/stacks/Django2.svg"
+import IconDjango from "../public/stacks/Django.svg"
 import IconPython from "../public/stacks/Python.svg"
 import IconDjangoRestFramework from "../public/stacks/DjangoRestFramework.svg"
 import IconSQLite3 from "../public/stacks/Sqlite3.svg"
@@ -103,7 +99,7 @@ export const myStacks = [
   },
   {
     title: "Django",
-    img: IconDjango2,
+    img: IconDjango,
   },
   {
     title: "Python",

@@ -11,17 +11,17 @@ export const Header = (): JSX.Element => {
   const [isDrop, setIsDrop] = useState<boolean>(false);
 
   const handleDrop = useCallback((): void => {
-    setIsDrop(!isDrop);
+    console.log('antes setIsDrop', isDrop)
+    setIsDrop(prevIsDrop => !prevIsDrop);
+    console.log('depois setIsDrop', !isDrop)
   }, [isDrop]);
 
   // !resolver o bug da abertura do  mobile
   return (
     <>
-      <header className="fixed z-20 h-24 py-10 w-screen justify-center gap-4 bg-gray-950 text-white border-2 border-yellow-300">
-        <div className="flex w-[95%] items-center justify-between gap-5 px-2 lg:w-[85rem] lg:max-w-full lg:px-7 mx-auto border-2 border-blue-500">
-          {/* <div className="border-2 border-purple-500 w-fit px-[0.142rem]"> */}
-            <h2 className="text-xl font-semibold md:text-2xl">Isaias Candido</h2>
-          {/* </div> */}
+      <header className="fixed z-20 h-24 py-10 w-screen justify-center gap-4 bg-gray-950 lg:pl-5 text-white border-2 border-yellow-300">
+        <div className="flex w-[95%] items-center justify-between gap-5 px-2 lg:w-[85rem] lg:max-w-full mx-auto border-2 border-blue-500">
+          <h2 className="text-xl font-semibold md:text-2xl">Isaias Candido</h2>
           <div className="hidden lg:w-2/4 items-center justify-between font-normal lg:flex lg:max-w-[500px] border-2 border-red-600">
             <Link className="text-base md:text-xl font-medium" href="#inicio" role="button">
               Início
@@ -42,7 +42,7 @@ export const Header = (): JSX.Element => {
           <motion.button
             type="button"
             className="lg:hidden"
-            initial="open"
+            initial="closed"
             animate={isDrop ? "open" : "closed"}
             aria-label={isDrop ? "Abrir menu" : "Fechar menu"}
           >
@@ -68,4 +68,4 @@ export const Header = (): JSX.Element => {
       </header>
     </>
   );
-};
+}
