@@ -16,9 +16,9 @@ export const SectionProjects = async (): Promise<JSX.Element> => {
       <div className={`max-w-full h-[0.15rem] custom-gradient`}></div>
       <section
         id="projetos"
-        className="flex w-full flex-col items-center justify-center bg-gray-950 py-14"
+        className="flex w-full flex-col items-center justify-center bg-gray-950 py-14 px-0"
       >
-        <div className="flex w-[95%] flex-col items-center justify-center gap-6 border-2 border-pink-400 lg:max-w-[1300px]">
+        <div className="flex w-[95%] flex-col items-center justify-center gap-6 lg:max-w-[1315px]">
           <h2 className="self-start text-3xl font-bold my-3">
             Meus projetos
           </h2>
@@ -29,7 +29,7 @@ export const SectionProjects = async (): Promise<JSX.Element> => {
             {repos &&
               repos?.map?.(({ id, name, language, html_url }, index) => (
                 <li
-                  className={`flex h-52 min-w-full max-w-full flex-col gap-7 self-center mt-5`}
+                  className={`flex h-52 min-w-full max-w-full flex-col gap-7 self-center mt-8`}
                   key={id}
                 >
                   <h2

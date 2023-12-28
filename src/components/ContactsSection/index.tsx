@@ -22,16 +22,16 @@ export const Contacts = (): JSX.Element => {
       <div className={`custom-gradient h-[0.15rem] w-full`}></div>
       <section
         id="contatos"
-        className="flex max-w-full flex-col items-center justify-center py-36 lg:py-56 border-2 border-sky-400 bg-gray-i-900 lg:flex-row"
+        className="flex max-w-full flex-col items-center justify-center py-36 lg:py-56 bg-gray-i-900 lg:flex-row"
       >
-        <div className="w-[95%] flex flex-col lg:px-4 justify-center self-center mx-auto border-2 border-purple-500 lg:flex-row lg:max-w-[1300px] lg:gap-32"
+        <div className="w-[95%] flex flex-col lg:px-4 justify-center self-center mx-auto lg:flex-row lg:max-w-[1300px] lg:gap-32"
           ref={ref}
         >
           <motion.div
-            className={`border-2 border-yellow-400 mb-8 lg:max-w-[40%] lg:mb-0`}
+            className={`mb-8 lg:max-w-[40%] lg:mb-0`}
             style={{ scale }}
           >
-              <aside className="border-4 h-56 border-violet-600 lg:h-auto lg:min-w-full xl:sticky xl:top-32 xl:bottom-0 gap-[1rem] lg:max-w-[40%] lg:grid">
+              <aside className="h-56 lg:h-auto lg:min-w-full xl:sticky xl:top-32 xl:bottom-0 gap-[1rem] lg:max-w-[40%] lg:grid">
                 <h2
                   className={`text-[1.75rem] font-semibold`}
                 >
@@ -42,7 +42,7 @@ export const Contacts = (): JSX.Element => {
                 </h2>
             </aside>
           </motion.div>
-          <div className="flex max-w-full flex-col gap-24 lg:h-full lg:max-w-[45%] lg:self-center border-2 border-lime-500">
+          <div className="flex max-w-full flex-col gap-24 lg:h-full lg:max-w-[45%] lg:self-center">
             <WhatsAppContainer />
             <EmailContainer />
             <LinkedInContainer />

@@ -1,68 +1,62 @@
 "use client"
 import { INavLinksProps } from "@/interface/icons.interface";
-import { AnimatePresence, AnimationControls, motion, useAnimation } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export const MenuMobile = ({ isDrop, handleDrop }: INavLinksProps): JSX.Element => {
-  const controls: AnimationControls = useAnimation();
-
-  const myVariants = {
-    open: {
-      opacity: 1,
-      y: 20,
-      transition: {
-        staggerChildren: 0.1,
-        type: "spring",
-        ease: "easeIn",
-        duration: 0.3,
-      },
+  const DropDownVariants = {
+    initial: {
+      scaleY: 0,
     },
-    closed: {
-      opacity: 0,
-      y: 0,
+    animate: {
+      scaleY: 1,
       transition: {
         staggerChildren: 0.1,
-        type: "spring",
         ease: "easeInOut",
-        duration: 0.3,
+        duration: 0.5,
       },
     },
+    exit: {
+      scaleY: 0,
+      transition: {
+        staggerChildren: 0.1,
+        ease: "easeInOut",
+        duration: 0.5,
+      },
+    }
   };
 
   const childVariants = {
-    open: {
+    initial: {
+      scaleY: 0,
+      opacity: 0,
+      y: -100,
+      transition: { type: "spring", ease: "easeInOut", duration: 0.3 },
+    },
+    animate: {
+      scaleY: 1,
       opacity: 1,
       y: 0,
       transition: { type: "spring", ease: "easeInOut", duration: 0.3 },
     },
-    closed: {
+    exit: {
+      scaleY: 0,
       opacity: 0,
       y: -100,
-      transition: { type: "spring", ease: "easeInOut", duration: 0.4 },
+      transition: { type: "spring", ease: "easeInOut", duration: 0.3 },
     },
   };
-
-  useEffect(() => {
-        console.log('Efeito MenuMobile - isDrop:', isDrop);
-
-    if (isDrop) {
-      console.log(controls.start("open"));
-      console.log('aberto', isDrop);
-    } else {
-      console.log(controls.start("closed").then(() => controls.set("closed")));
-      console.log('fechado', isDrop);
-    }
-  }, [isDrop, controls]);
   
   return (
     <AnimatePresence>
+      
+      {isDrop && (
         <motion.nav
-          initial="closed"
-          animate={controls}
-          variants={myVariants}
-          exit="closed"
-          className={`${isDrop ? "flex" : "hidden"} absolute left-0 right-0 top-16 z-30 flex flex-col justify-center items-center gap-4 bg-gray-950 pb-6 mx-auto lg:hidden`}
+          initial="initial"
+          animate="animate"
+          variants={DropDownVariants}
+          exit="exit"
+          className={`${isDrop ? "flex" : "hidden"} absolute left-0 right-0 top-20 z-30 flex flex-col origin-top justify-center items-center gap-4 bg-gray-950 pb-6 mx-auto lg:hidden`}
         >
           <div className="w-11/12 flex flex-col gap-4 self-center pl-1 pt-8 lg:pl-0">
             <motion.div variants={childVariants}>
@@ -111,14 +105,20 @@ export const MenuMobile = ({ isDrop, handleDrop }: INavLinksProps): JSX.Element 
           </div>
 
           <motion.div
-            initial="closed"
-            animate={controls}
+            initial="initial"
+            animate="animate"
             variants={childVariants}
-            transition={{ delay: 1 }}
-            exit="closed"
+            transition={{ delay: 1.5 }}
+            exit={{ ...childVariants.exit,
+              transition : {
+                ...childVariants.exit.transition,
+                delay: 0.2
+              }
+            }}
             className={`custom-gradient absolute left-0 right-0 top-[13.5rem] z-20 h-[0.1rem] w-full`}
           ></motion.div>
         </motion.nav>
+      )}
     </AnimatePresence>
   );
 };

@@ -16,7 +16,7 @@ export const StackCard = ({ title, icon: Icon }: StackProps): JSX.Element => {
 
   return (
     <li
-      className={`min-w-[100px] min-h-[80px] lg:min-w-fit lg:max-h-[120px] gap-4 flex flex-col justify-center items-center mt-4 border-2 border-orange-500 ${
+      className={`min-w-[100px] min-h-[80px] lg:min-w-fit lg:max-h-[120px] gap-4 flex flex-col justify-center items-center mt-4 ${
         iPadAirStyle ? "mx-auto" : ""
       }`}
     >

@@ -64,13 +64,13 @@ export const HomeSection = (): JSX.Element => {
   return (
     <section
       id="inicio"
-      className={`z-0 flex w-[95%] max-h-max flex-col lg:w-full lg:img-projects-bg lg:bg-fixed lg:bg-right lg:bg-no-repeat border-2 border-green-500 bg-gray-i-900`}
+      className={`z-0 flex w-[95%] max-h-max flex-col lg:w-full lg:img-projects-bg lg:bg-fixed lg:bg-right lg:bg-no-repeat bg-gray-i-900`}
     >
       <div
-        className={`flex flex-col mt-44 max-w-full mx-auto border-2 border-red-600 lg:w-[85rem] lg:max-w-full lg:px-6`}
+        className={`flex flex-col mt-44 max-w-full mx-auto lg:w-[85rem] lg:max-w-full lg:px-6`}
       >
-        <div className="w-full flex flex-col mx-auto border-2 border-blue-500 lg:max-w-[550px] xl:max-w-[690px] pb-7 lg:self-start lg:mx-0">
-          <div className="max-w-full gap-2 self-center border-2">
+        <div className="w-full flex flex-col mx-auto lg:max-w-[550px] xl:max-w-[690px] pb-7 lg:self-start lg:mx-0">
+          <div className="max-w-full gap-2 self-center">
             <div className="mb-8 flex max-w-full items-center gap-2 self-start md:w-2/3">
               <Image
                 className="transition-brightness h-14 w-14 rounded-full duration-200 ease-in-out hover:brightness-75"
@@ -92,7 +92,7 @@ export const HomeSection = (): JSX.Element => {
               inovação e a eficiência se encontram. Aprecie a experiência!
             </h6>
           </div>
-          <div className="mt-4 flex min-w-full max-w-full flex-col items-center gap-8 lg:gap-6 self-center border-2 border-orange-600 px-0 py-12 md:flex-row md:gap-5">
+          <div className="mt-4 flex min-w-full max-w-full flex-col items-center gap-8 lg:gap-6 self-center px-0 py-12 md:flex-row md:gap-5">
             <Link
               href="#projetos"
               className={`flex h-[50px] w-full items-center justify-center xl:min-w-max xl:max-w-[250px] lg:font-bold ${
