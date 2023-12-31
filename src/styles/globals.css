@@ -5,7 +5,7 @@
 
 @layer components {
   .body {
-    @apply max-w-[100vw] min-h-screen z-0 flex flex-col justify-center items-center bg-gray-i-900 text-white px-1;
+    @apply max-w-[100vw] min-h-screen z-0 flex flex-col justify-center items-center bg-gray-i-900 text-white;
   }
 
   .custom-gradient {

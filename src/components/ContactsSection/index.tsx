@@ -19,7 +19,7 @@ export const Contacts = (): JSX.Element => {
 
   return (
     <>
-      <div className={`custom-gradient h-[0.15rem] w-full`}></div>
+      <div className={`custom-gradient h-[0.15rem] w-full px-1`}></div>
       <section
         id="contatos"
         className="flex max-w-full flex-col items-center justify-center py-36 lg:py-56 bg-gray-i-900 lg:flex-row"

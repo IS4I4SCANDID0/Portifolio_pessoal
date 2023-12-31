@@ -16,9 +16,9 @@ export const SectionProjects = async (): Promise<JSX.Element> => {
       <div className={`max-w-full h-[0.15rem] custom-gradient`}></div>
       <section
         id="projetos"
-        className="flex w-full flex-col items-center justify-center bg-gray-950 py-14 px-0"
+        className="flex min-w-full flex-col items-center justify-center bg-gray-950 py-14 px-1"
       >
-        <div className="flex w-[95%] flex-col items-center justify-center gap-6 lg:max-w-[1315px]">
+        <div className="flex w-[95%] flex-col items-center justify-center gap-6 lg:max-w-[1315px] xl-ml-1">
           <h2 className="self-start text-3xl font-bold my-3">
             Meus projetos
           </h2>

@@ -3,7 +3,7 @@ import { INavLinksProps } from "@/interface/icons.interface";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
-export const MenuMobile = ({ isDrop, handleDrop }: INavLinksProps): JSX.Element => {
+export const MenuMobile = ({ isToggleMenu, handleDrop }: INavLinksProps): JSX.Element => {
   const DropDownVariants = {
     initial: {
       scaleY: 0,
@@ -50,13 +50,13 @@ export const MenuMobile = ({ isDrop, handleDrop }: INavLinksProps): JSX.Element 
   return (
     <AnimatePresence>
       
-      {isDrop && (
+      {isToggleMenu && (
         <motion.nav
           initial="initial"
           animate="animate"
           variants={DropDownVariants}
           exit="exit"
-          className={`${isDrop ? "flex" : "hidden"} absolute left-0 right-0 top-20 z-30 flex flex-col origin-top justify-center items-center gap-4 bg-gray-950 pb-6 mx-auto lg:hidden`}
+          className={`${isToggleMenu ? "flex" : "hidden"} absolute left-0 right-0 top-20 z-30 flex flex-col origin-top justify-center items-center gap-4 bg-gray-950 pb-6 mx-auto lg:hidden`}
         >
           <div className="w-11/12 flex flex-col gap-4 self-center pl-1 pt-8 lg:pl-0">
             <motion.div variants={childVariants}>

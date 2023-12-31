@@ -1,38 +1,38 @@
-{ 
-  "printWidth": 80,
-  "tabWidth": 2,
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "nome",
-  "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "arrowsParens": "avoid",
-  "overrides": [{
-    "files": "*.xml"
-  }],
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:prettier/recommended"
-  ]
-}
-
-
-// {
+// { 
 //   "printWidth": 80,
 //   "tabWidth": 2,
-//   "useTabs": false,
 //   "semi": true,
 //   "singleQuote": true,
-//   "trailingComma": "none",
+//   "trailingComma": "nome",
 //   "bracketSpacing": true,
 //   "jsxBracketSameLine": false,
-//   "arrowParens": "avoid",
-//   "overrides": [
-//     {
-//       "files": "*.xml",
-//       "options": {
-//         "parser": "xml"
-//       }
-//     }
+//   "arrowsParens": "avoid",
+//   "overrides": [{
+//     "files": "*.xml"
+//   }],
+//   "extends": [
+//     "next/core-web-vitals",
+//     "plugin:prettier/recommended"
 //   ]
 // }
+
+
+// // {
+// //   "printWidth": 80,
+// //   "tabWidth": 2,
+// //   "useTabs": false,
+// //   "semi": true,
+// //   "singleQuote": true,
+// //   "trailingComma": "none",
+// //   "bracketSpacing": true,
+// //   "jsxBracketSameLine": false,
+// //   "arrowParens": "avoid",
+// //   "overrides": [
+// //     {
+// //       "files": "*.xml",
+// //       "options": {
+// //         "parser": "xml"
+// //       }
+// //     }
+// //   ]
+// // }

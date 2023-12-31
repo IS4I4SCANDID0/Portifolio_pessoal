@@ -53,7 +53,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <body
-        className={`${IBMPlexSans.className} scrollbar-thumb-gradient relative overflow-x-hidden scrollbar-thin scrollbar-track-gray-950`}
+        className={`${IBMPlexSans.className} scrollbar-thumb-gradient relative overflow-x-hidden scrollbar-thin scrollbar-track-neutral-900`}
       >
         {children}
       </body>

@@ -64,7 +64,7 @@ export const HomeSection = (): JSX.Element => {
   return (
     <section
       id="inicio"
-      className={`z-0 flex w-[95%] max-h-max flex-col lg:w-full lg:img-projects-bg lg:bg-fixed lg:bg-right lg:bg-no-repeat bg-gray-i-900`}
+      className={`z-0 flex w-[95%] max-h-max flex-col lg:w-full lg:img-projects-bg lg:bg-fixed lg:bg-right lg:bg-no-repeat bg-gray-i-900 px-1`}
     >
       <div
         className={`flex flex-col mt-44 max-w-full mx-auto lg:w-[85rem] lg:max-w-full lg:px-6`}

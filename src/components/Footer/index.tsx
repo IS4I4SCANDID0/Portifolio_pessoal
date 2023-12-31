@@ -7,7 +7,7 @@ export const Footer = (): JSX.Element => {
   return (
     <footer
       id="rodape"
-      className={`flex h-auto lg:h-[330px] w-screen py-28 flex-col items-center justify-center bg-gray-950 text-white`}
+      className={`flex h-auto lg:h-[330px] w-screen py-28 flex-col items-center justify-center bg-gray-950 text-white px-1`}
     >
       <div className="mx-auto flex w-11/12 flex-col items-center gap-9 lg:max-w-[1300px] lg:flex-row lg:justify-between lg:gap-6">
         <div className="flex flex-col text-center lg:text-left">
