@@ -4,9 +4,6 @@ import { useRef } from "react";
 import { WhatsAppContainer } from "../ContactsContainer/WhatsApp";
 import { EmailContainer } from "../ContactsContainer/Email";
 import { LinkedInContainer } from "../ContactsContainer/LinkedIn";
-// import { Raleway } from "next/font/google";
-// import { NextFont } from "next/dist/compiled/@next/font";
-// import { IFontProps } from "@/interface/project.interface";
 
 export const Contacts = (): JSX.Element => {
   const ref = useRef<HTMLDivElement | null>(null);

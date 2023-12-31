@@ -1,4 +1,3 @@
-import { IconProps } from "@/interface/icons.interface";
 import Link from "next/link";
 import { SiWhatsapp } from "react-icons/si";
 import { Roboto_Flex } from "next/font/google"
@@ -9,7 +8,7 @@ const robotoFlex: NextFont = Roboto_Flex({
   weight: ["400"],
 })
  
-export const WhatsAppContainer = ({ Icon }: IconProps): JSX.Element => {
+export const WhatsAppContainer = (): JSX.Element => {
   return (
     <div className="mt-4 flex max-w-full items-center lg:p-3 lg:mt-0 lg:pt-0">
       <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-tr from-green-400 from-20% to-green-500 to-80% p-4">

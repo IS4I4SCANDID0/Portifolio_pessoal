@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
 
 export const useMediaScreen = (breakpoint: number): boolean => {
-  const [isIPadAir, setIsIPadAir] = useState<boolean>(true)
+  const [isScreenSize, setIsScreenSize] = useState<boolean>(true)
 
   useEffect(() => {
     const measureScreen = (): void => {
       if(window.innerWidth < breakpoint) {
-        setIsIPadAir(false)
+        setIsScreenSize(false)
 
       } else if (window.innerWidth >= breakpoint) {
-        setIsIPadAir(true)
+        setIsScreenSize(true)
       }
     }
     measureScreen()
@@ -21,5 +21,5 @@ export const useMediaScreen = (breakpoint: number): boolean => {
     }
   }, [])
 
-  return isIPadAir
+  return isScreenSize
 } 
