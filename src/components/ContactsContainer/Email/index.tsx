@@ -1,4 +1,3 @@
-import { IconProps } from "@/interface/icons.interface";
 import Link from "next/link";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { Roboto_Flex } from "next/font/google"
@@ -8,7 +7,7 @@ const robotoFlex = Roboto_Flex({
   weight: ["400"]
 })
 
-export const EmailContainer = ({ Icon }: IconProps): JSX.Element => {
+export const EmailContainer = (): JSX.Element => {
   return (
     <div className="max-w-full lg:p-3 mt-4 flex items-center lg:mt-0">
       <div className="mr-5 mt-[0.3rem] flex items-center justify-center self-start rounded bg-gradient-to-tr from-neutral-900 from-20% to-stone-950 to-80% p-4">

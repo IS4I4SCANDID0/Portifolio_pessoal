@@ -1,6 +1,6 @@
 "use client"
 import { useMediaScreen } from "@/hooks/screenMedia"
-import { ChildrenProps, StackProps } from "@/interface/stack.interface"
+import { ChildrenProps } from "@/interface/stack.interface"
 
 export const Stack = ({ children }: ChildrenProps): JSX.Element => {
   const iPadAirStyle = useMediaScreen(768) 

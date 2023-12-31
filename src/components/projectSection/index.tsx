@@ -57,6 +57,7 @@ export const SectionProjects = async (): Promise<JSX.Element> => {
                       className={`${robotoFlex.className}`}
                       href={html_url}
                       target="_blank"
+                      rel= "noreferrer"
                     >
                       Ver código no GitHub
                     </a>
