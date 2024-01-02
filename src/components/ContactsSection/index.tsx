@@ -19,7 +19,7 @@ export const Contacts = (): JSX.Element => {
       <div className={`custom-gradient h-[0.15rem] w-full px-1`}></div>
       <section
         id="contatos"
-        className="flex max-w-full flex-col items-center justify-center py-36 lg:py-56 bg-gray-i-900 lg:flex-row"
+        className="flex max-w-full flex-col items-center justify-center py-36 bg-gray-i-900 lg:flex-row"
       >
         <div className="w-[95%] flex flex-col lg:px-4 justify-center self-center mx-auto lg:flex-row lg:max-w-[1300px] lg:gap-32"
           ref={ref}
