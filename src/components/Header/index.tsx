@@ -14,7 +14,7 @@ export const Header = (): JSX.Element => {
 
   return (
     <>
-      <header className="fixed z-20 h-24 py-10 px-5 w-screen justify-center gap-4 bg-gray-950 lg:px-6 xl:pl-9 text-white">
+      <header className="fixed z-20 h-24 py-10 w-screen justify-center gap-4 bg-gray-950 lg:px-6 xl:pl-9 text-white">
         <div className="flex w-[95%] items-center justify-between gap-5 px-[0.45rem] lg:w-[85rem] lg:max-w-full mx-auto">
           <h2 className="text-xl font-semibold md:text-2xl xl:ml-1">Isaias Candido</h2>
           <div className="hidden lg:w-2/4 items-center justify-between font-normal lg:flex lg:max-w-[500px]">
